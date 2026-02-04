@@ -7,9 +7,9 @@
     </am:CreatedBy>
     <am:UpdatedBy>
       <am:Name>SSDTRS</am:Name>
-      <am:Version>17.14.36623.8</am:Version>
+      <am:Version>17.14.36717.8</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-01-08T13:05:05.9178045Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-02-04T19:05:40.1795231Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -1210,15 +1210,24 @@ First(Fields!Entity_Name.Value, "NameandAddress") + IIF( UCASE(Parameters!Accoun
       <Nullable>true</Nullable>
       <Prompt>AccountNumber</Prompt>
     </ReportParameter>
-    <ReportParameter Name="FirmNumber">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <Prompt>FirmNumber</Prompt>
-    </ReportParameter>
     <ReportParameter Name="username">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
       <Prompt>username</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Trader">
+      <DataType>String</DataType>
+      <Prompt>Trader</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FirmNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>All</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>FirmNumber</Prompt>
+      <Hidden>true</Hidden>
     </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
@@ -1242,14 +1251,19 @@ First(Fields!Entity_Name.Value, "NameandAddress") + IIF( UCASE(Parameters!Accoun
           <ParameterName>AccountNumber</ParameterName>
         </CellDefinition>
         <CellDefinition>
-          <ColumnIndex>3</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>FirmNumber</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>1</RowIndex>
           <ParameterName>username</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>Trader</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>FirmNumber</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

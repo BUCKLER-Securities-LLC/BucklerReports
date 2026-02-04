@@ -3,7 +3,6 @@
   <ConnectionProperties>
     <Extension>SQL</Extension>
     <ConnectString>Data Source=FISSQLUAT\FISSQLUAT;Initial Catalog=Rpt</ConnectString>
-    <IntegratedSecurity>true</IntegratedSecurity>
   </ConnectionProperties>
   <DataSourceID>2a406c7d-468c-4977-9d2b-709459922e3c</DataSourceID>
 </RptDataSource>
