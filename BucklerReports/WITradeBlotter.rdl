@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.14.36811.4</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-02-25T15:00:38.0682388Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-02-25T19:04:09.1577159Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -95,7 +95,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>rpt_get_GetTradeBlotter</CommandText>
+        <CommandText>rpt_get_GetWITradeBlotter</CommandText>
       </Query>
       <Fields>
         <Field Name="TransNum">
@@ -236,7 +236,7 @@
         </Field>
         <Field Name="ExecutionTime">
           <DataField>ExecutionTime</DataField>
-          <rd:TypeName>System.TimeSpan</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Color">
           <DataField>Color</DataField>
@@ -1534,7 +1534,7 @@ FormatDateTime(Parameters!SystemDate.Value)</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Trade Blotter</Value>
+                      <Value>WI Trade Blotter</Value>
                       <Style>
                         <FontSize>18pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -2299,7 +2299,7 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox66</rd:DefaultName>
-              <Top>0.76263in</Top>
+              <Top>0.75785in</Top>
               <Left>18.56932in</Left>
               <Height>0.25in</Height>
               <Width>1.2in</Width>
@@ -2413,7 +2413,7 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox69</rd:DefaultName>
-              <Top>0.76263in</Top>
+              <Top>0.75785in</Top>
               <Left>21.88807in</Left>
               <Height>0.25in</Height>
               <Width>1.2in</Width>

@@ -7,9 +7,9 @@
     </am:CreatedBy>
     <am:UpdatedBy>
       <am:Name>SSDTRS</am:Name>
-      <am:Version>17.14.36623.8</am:Version>
+      <am:Version>17.14.36811.4</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-01-08T13:30:16.1224034Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-02-25T19:07:02.2839581Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -81,14 +81,11 @@
           <QueryParameter Name="@SystemDate">
             <Value>=Parameters!SystemDate.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@FirmNumber">
-            <Value>=Parameters!FirmNumber.Value</Value>
-          </QueryParameter>
           <QueryParameter Name="@Entity">
             <Value>=Parameters!Entity.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@AccountNumber">
-            <Value>=Parameters!AccountNumber.Value</Value>
+          <QueryParameter Name="@Trader">
+            <Value>=Parameters!Trader.Value</Value>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
@@ -105,6 +102,10 @@
         </Field>
         <Field Name="AccountNumber">
           <DataField>AccountNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AccountName">
+          <DataField>AccountName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="AccountType">
@@ -125,6 +126,18 @@
         </Field>
         <Field Name="UsdEquivalent">
           <DataField>UsdEquivalent</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BeginningBalance">
+          <DataField>BeginningBalance</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SettlementBalance">
+          <DataField>SettlementBalance</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="DailyMovement">
+          <DataField>DailyMovement</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
       </Fields>
@@ -313,9 +326,6 @@
                   <Width>1.2in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.325in</Width>
-                </TablixColumn>
-                <TablixColumn>
                   <Width>1.2625in</Width>
                 </TablixColumn>
                 <TablixColumn>
@@ -348,41 +358,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Header_FirmNumber">
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>FirmNumber</Value>
-                                  <Style>
-                                    <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                    <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -416,7 +392,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -441,7 +417,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Amount</Value>
+                                  <Value>Amount(Native)</Value>
                                   <Style>
                                     <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -450,7 +426,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -484,7 +460,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -518,7 +494,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -556,40 +532,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Detail_FirmNumber">
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!FirmNumber.Value</Value>
-                                  <Style>
-                                    <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                                    <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -622,7 +565,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -656,7 +599,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>=IIf(Fields!Amount.Value&lt;0,"Right","Left")</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -672,6 +615,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -754,7 +698,6 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
-                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -766,9 +709,8 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>MainreportDS</DataSetName>
-            <Left>0in</Left>
             <Height>0.5in</Height>
-            <Width>7.90833in</Width>
+            <Width>6.58334in</Width>
             <Style />
           </Tablix>
           <Textbox Name="Textboxdisclaimer">
@@ -786,7 +728,6 @@
               </Paragraph>
             </Paragraphs>
             <Top>1.82028in</Top>
-            <Left>0in</Left>
             <Height>0.26042in</Height>
             <Width>7.90833in</Width>
             <ZIndex>1</ZIndex>
@@ -874,7 +815,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Report Title</Value>
+                      <Value>Cash Balance</Value>
                       <Style>
                         <FontSize>9pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -1073,6 +1014,10 @@ First(Fields!Entity_Name.Value, "NameandAddress") + IIF( UCASE(Parameters!Accoun
       <Nullable>true</Nullable>
       <Prompt>username</Prompt>
     </ReportParameter>
+    <ReportParameter Name="Trader">
+      <DataType>String</DataType>
+      <Prompt>Trader</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -1103,6 +1048,11 @@ First(Fields!Entity_Name.Value, "NameandAddress") + IIF( UCASE(Parameters!Accoun
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>1</RowIndex>
           <ParameterName>username</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>Trader</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

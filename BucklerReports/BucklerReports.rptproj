@@ -53,11 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <Report Include="cashBalance.rdl" />
+    <Report Include="DailySettlementActivity.rdl" />
     <Report Include="FISCashBalance.rdl" />
     <Report Include="FISOpenitems.rdl" />
     <Report Include="FISTradeBlotter.rdl" />
     <Report Include="TemplateReportsGroup.rdl" />
     <Report Include="TemplateReportsTabularPotrait.rdl" />
+    <Report Include="WITradeBlotter.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>
