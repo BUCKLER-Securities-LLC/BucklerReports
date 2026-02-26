@@ -56,6 +56,8 @@
     <Report Include="DailySettlementActivity.rdl" />
     <Report Include="FISCashBalance.rdl" />
     <Report Include="FISOpenitems.rdl" />
+    <Report Include="FISOutstandingRepoBlotter.rdl" />
+    <Report Include="FISPendingOutright.rdl" />
     <Report Include="FISTradeBlotter.rdl" />
     <Report Include="TemplateReportsGroup.rdl" />
     <Report Include="TemplateReportsTabularPotrait.rdl" />
