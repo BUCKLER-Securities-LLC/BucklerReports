@@ -2695,7 +2695,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
             <Style />
           </Tablix>
         </ReportItems>
-        <Height>1.8307in</Height>
+        <Height>1.84112in</Height>
         <Style />
       </Body>
       <Width>29.72545in</Width>
@@ -3900,7 +3900,7 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
           </Style>
         </PageFooter>
         <PageHeight>8.78in</PageHeight>
-        <PageWidth>30.2254in</PageWidth>
+        <PageWidth>30.19in</PageWidth>
         <LeftMargin>0.2in</LeftMargin>
         <RightMargin>0.2in</RightMargin>
         <TopMargin>0.2in</TopMargin>
