@@ -7,9 +7,9 @@
     </am:CreatedBy>
     <am:UpdatedBy>
       <am:Name>SSDTRS</am:Name>
-      <am:Version>17.14.36811.4</am:Version>
+      <am:Version>17.14.36717.8</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-02-25T19:04:09.1577159Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-03-02T14:54:55.9810110Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -431,7 +431,7 @@
                   <Width>0.67026in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.86458in</Width>
+                  <Width>1.03125in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.60417in</Width>
@@ -1250,7 +1250,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1285,7 +1285,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1371,6 +1371,61 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                     <TablixCell />
                   </TablixCells>
                 </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textboxdisclaimer">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=First(Fields!DisclaimerText.Value, "Disclaimer")</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>21</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
               </TablixRows>
             </TablixBody>
             <TablixColumnHierarchy>
@@ -1422,51 +1477,26 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                 <TablixMember>
                   <KeepWithGroup>Before</KeepWithGroup>
                 </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
             <RepeatColumnHeaders>true</RepeatColumnHeaders>
             <RepeatRowHeaders>true</RepeatRowHeaders>
             <DataSetName>MainreportDS</DataSetName>
-            <Height>0.75in</Height>
-            <Width>23.08807in</Width>
+            <Height>1in</Height>
+            <Width>23.25474in</Width>
             <Style />
           </Tablix>
-          <Textbox Name="Textboxdisclaimer">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!DisclaimerText.Value, "Disclaimer")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>0.82028in</Top>
-            <Height>0.26042in</Height>
-            <Width>13.73125in</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
         </ReportItems>
-        <Height>1.16403in</Height>
+        <Height>1in</Height>
         <Style />
       </Body>
-      <Width>24.28808in</Width>
+      <Width>23.25474in</Width>
       <Page>
         <PageHeader>
-          <Height>1.04041in</Height>
+          <Height>1.00916in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1478,7 +1508,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                   <TextRuns>
                     <TextRun>
                       <Value>="Activity Date: " + 
-FormatDateTime(Parameters!SystemDate.Value)</Value>
+FormatDateTime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                       <Style>
                         <FontSize>7.5pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -1513,7 +1543,7 @@ FormatDateTime(Parameters!SystemDate.Value)</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Left>21.96875in</Left>
+              <Left>20.89375in</Left>
               <Height>0.28299in</Height>
               <Width>2.19432in</Width>
               <Style>
@@ -1641,9 +1671,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>ENTITY</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1660,10 +1691,9 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -1679,9 +1709,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>EXT REF</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1698,10 +1729,9 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
               <ZIndex>5</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -1717,9 +1747,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>TRANS NUM</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1732,14 +1763,13 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
               <Top>0.75785in</Top>
               <Left>1.87027in</Left>
               <Height>0.25in</Height>
-              <Width>0.86458in</Width>
+              <Width>1.03125in</Width>
               <ZIndex>6</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -1755,9 +1785,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>TRADER</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1767,17 +1798,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox51</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>2.73485in</Left>
+              <Top>0.75916in</Top>
+              <Left>2.90151in</Left>
               <Height>0.25in</Height>
               <Width>0.60417in</Width>
               <ZIndex>7</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -1793,9 +1823,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>TRADE DATE</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1805,17 +1836,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox52</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>3.33902in</Left>
+              <Top>0.75916in</Top>
+              <Left>3.50568in</Left>
               <Height>0.25in</Height>
               <Width>0.9in</Width>
               <ZIndex>8</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -1831,9 +1861,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>SETTLE DATE</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1843,17 +1874,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox53</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>4.23902in</Left>
+              <Top>0.75916in</Top>
+              <Left>4.40568in</Left>
               <Height>0.25in</Height>
               <Width>0.96875in</Width>
               <ZIndex>9</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -1869,9 +1899,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>B/S</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1881,17 +1912,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox54</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>5.20777in</Left>
+              <Top>0.75916in</Top>
+              <Left>5.37443in</Left>
               <Height>0.25in</Height>
               <Width>0.30891in</Width>
               <ZIndex>10</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -1907,9 +1937,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>QUANTITY</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1919,17 +1950,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox55</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>5.51668in</Left>
+              <Top>0.75916in</Top>
+              <Left>5.68334in</Left>
               <Height>0.25in</Height>
               <Width>1.04375in</Width>
               <ZIndex>11</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -1945,9 +1975,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>ASSET DESCRIPTION</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1957,17 +1988,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox56</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>6.56043in</Left>
+              <Top>0.75916in</Top>
+              <Left>6.72709in</Left>
               <Height>0.25in</Height>
               <Width>2.60057in</Width>
               <ZIndex>12</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -1983,9 +2013,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>CUSIP</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1995,17 +2026,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox57</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>9.161in</Left>
+              <Top>0.75916in</Top>
+              <Left>9.32766in</Left>
               <Height>0.25in</Height>
               <Width>0.95625in</Width>
               <ZIndex>13</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -2021,9 +2051,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>ISIN</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2033,17 +2064,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox58</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>10.11725in</Left>
+              <Top>0.75916in</Top>
+              <Left>10.28391in</Left>
               <Height>0.25in</Height>
               <Width>0.87708in</Width>
               <ZIndex>14</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -2059,9 +2089,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>CCY</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2071,17 +2102,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox59</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>10.99433in</Left>
+              <Top>0.75916in</Top>
+              <Left>11.16099in</Left>
               <Height>0.25in</Height>
               <Width>0.41875in</Width>
               <ZIndex>15</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -2097,9 +2127,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>PRICE</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2109,17 +2140,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox60</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>11.41308in</Left>
+              <Top>0.75916in</Top>
+              <Left>11.57974in</Left>
               <Height>0.25in</Height>
               <Width>0.89792in</Width>
               <ZIndex>16</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -2135,9 +2165,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>PRINCIPAL</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2147,17 +2178,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox61</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>12.311in</Left>
+              <Top>0.75916in</Top>
+              <Left>12.47766in</Left>
               <Height>0.25in</Height>
               <Width>1.2in</Width>
               <ZIndex>17</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -2173,9 +2203,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>INTEREST</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2185,17 +2216,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox62</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>13.511in</Left>
+              <Top>0.75916in</Top>
+              <Left>13.67766in</Left>
               <Height>0.25in</Height>
               <Width>1.04375in</Width>
               <ZIndex>18</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -2211,9 +2241,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>NET MONEY</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2223,17 +2254,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox63</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>14.55475in</Left>
+              <Top>0.75916in</Top>
+              <Left>14.72141in</Left>
               <Height>0.25in</Height>
               <Width>1.2in</Width>
               <ZIndex>19</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -2249,9 +2279,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>SHORT NAME</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2261,17 +2292,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox64</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>15.75475in</Left>
+              <Top>0.75916in</Top>
+              <Left>15.92141in</Left>
               <Height>0.25in</Height>
               <Width>2.81458in</Width>
               <ZIndex>20</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -2287,9 +2317,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>COMM</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2299,17 +2330,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox66</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>18.56932in</Left>
+              <Top>0.75916in</Top>
+              <Left>18.73598in</Left>
               <Height>0.25in</Height>
               <Width>1.2in</Width>
               <ZIndex>21</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -2325,9 +2355,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>USER NAME</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2337,17 +2368,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox67</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>19.76932in</Left>
+              <Top>0.75916in</Top>
+              <Left>19.93598in</Left>
               <Height>0.25in</Height>
               <Width>1.2in</Width>
               <ZIndex>22</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -2363,9 +2393,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>ENTRY DATE</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2375,17 +2406,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox68</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>20.96932in</Left>
+              <Top>0.75916in</Top>
+              <Left>21.13598in</Left>
               <Height>0.25in</Height>
               <Width>0.91875in</Width>
               <ZIndex>23</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -2401,9 +2431,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                     <TextRun>
                       <Value>ENTRY TIME</Value>
                       <Style>
-                        <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                        <FontFamily>Arial</FontFamily>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
+                        <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
+                        <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2413,17 +2444,16 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox69</rd:DefaultName>
-              <Top>0.75785in</Top>
-              <Left>21.88807in</Left>
+              <Top>0.75916in</Top>
+              <Left>22.05473in</Left>
               <Height>0.25in</Height>
               <Width>1.2in</Width>
               <ZIndex>24</ZIndex>
               <Style>
                 <Border>
-                  <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <BackgroundColor>LightBlue</BackgroundColor>
+                <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -2463,7 +2493,7 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Left>23.30891in</Left>
+              <Left>22.1089in</Left>
               <Height>0.21389in</Height>
               <Width>0.97917in</Width>
               <Style>
@@ -2488,7 +2518,7 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
           </Style>
         </PageFooter>
         <PageHeight>8.78in</PageHeight>
-        <PageWidth>24.85in</PageWidth>
+        <PageWidth>23.5in</PageWidth>
         <LeftMargin>0.25in</LeftMargin>
         <RightMargin>0.25in</RightMargin>
         <TopMargin>0.25in</TopMargin>
