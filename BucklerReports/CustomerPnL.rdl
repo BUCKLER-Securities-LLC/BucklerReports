@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.14.36717.8</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-03-02T11:57:09.4549914Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-03-02T14:55:10.2011624Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -2311,7 +2311,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                   <TextRuns>
                     <TextRun>
                       <Value>="System Date: " + 
-FormatDateTime(Parameters!SystemDate.Value)</Value>
+FormatDateTime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                       <Style>
                         <FontSize>7.5pt</FontSize>
                         <FontWeight>Bold</FontWeight>
