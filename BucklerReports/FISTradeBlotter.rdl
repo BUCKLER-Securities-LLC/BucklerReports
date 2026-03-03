@@ -786,7 +786,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                                   <Value>=Fields!BuySell.Value</Value>
                                   <Style>
                                     <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-                                    <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                                    <Color>=IIF(Fields!BuySell.Value = "B", "Green", IIF(Fields!BuySell.Value = "S", "Red", First(Fields!RowForeCol.Value, "reportformat")))</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1107,7 +1107,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                                   <Style>
                                     <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
                                     <Format>#,0.00;(#,0.00)</Format>
-                                    <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                                    <Color>=IIF(Fields!NetMoney.Value &gt;= 0, "Green", "Red")</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
