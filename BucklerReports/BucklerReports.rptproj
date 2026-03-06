@@ -61,6 +61,7 @@
     <Report Include="FISOutstandingRepoBlotter.rdl" />
     <Report Include="FISPendingOutright.rdl" />
     <Report Include="FISTradeBlotter.rdl" />
+    <Report Include="TDPnL.rdl" />
     <Report Include="TemplateReportsGroup.rdl" />
     <Report Include="TemplateReportsTabularPotrait.rdl" />
     <Report Include="test.rdl" />
