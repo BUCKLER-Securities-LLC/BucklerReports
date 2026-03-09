@@ -65,6 +65,7 @@
     <Report Include="TemplateReportsGroup.rdl" />
     <Report Include="TemplateReportsTabularPotrait.rdl" />
     <Report Include="WITradeBlotter.rdl" />
+    <Report Include="WITradePnL.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>
