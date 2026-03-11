@@ -57,14 +57,20 @@
     <Report Include="DailySettlementActivity.rdl" />
     <Report Include="FailsByAccount.rdl" />
     <Report Include="FISCashBalance.rdl" />
+    <Report Include="FISCostOfCarry.rdl" />
     <Report Include="FISOpenitems.rdl" />
     <Report Include="FISOutstandingRepoBlotter.rdl" />
     <Report Include="FISPendingOutright.rdl" />
     <Report Include="FISTradeBlotter.rdl" />
+<<<<<<< HEAD
     <Report Include="StockRecord.rdl" />
+=======
+    <Report Include="TDPnL.rdl" />
+>>>>>>> 95dc8dba548a171891067868ed8c74a312519cb9
     <Report Include="TemplateReportsGroup.rdl" />
     <Report Include="TemplateReportsTabularPotrait.rdl" />
     <Report Include="WITradeBlotter.rdl" />
+    <Report Include="WITradePnL.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>
