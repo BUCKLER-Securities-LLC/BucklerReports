@@ -55,11 +55,13 @@
     <Report Include="cashBalance.rdl" />
     <Report Include="CustomerPnL.rdl" />
     <Report Include="DailySettlementActivity.rdl" />
+    <Report Include="FailsByAccount.rdl" />
     <Report Include="FISCashBalance.rdl" />
     <Report Include="FISOpenitems.rdl" />
     <Report Include="FISOutstandingRepoBlotter.rdl" />
     <Report Include="FISPendingOutright.rdl" />
     <Report Include="FISTradeBlotter.rdl" />
+    <Report Include="StockRecord.rdl" />
     <Report Include="TemplateReportsGroup.rdl" />
     <Report Include="TemplateReportsTabularPotrait.rdl" />
     <Report Include="WITradeBlotter.rdl" />
