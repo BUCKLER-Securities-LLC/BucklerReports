@@ -63,9 +63,7 @@
     <Report Include="FISPendingOutright.rdl" />
     <Report Include="FISTradeBlotter.rdl" />
     <Report Include="StockRecord.rdl" />
-=======
     <Report Include="TDPnL.rdl" />
->>>>>>> 95dc8dba548a171891067868ed8c74a312519cb9
     <Report Include="TemplateReportsGroup.rdl" />
     <Report Include="TemplateReportsTabularPotrait.rdl" />
     <Report Include="WITradeBlotter.rdl" />
