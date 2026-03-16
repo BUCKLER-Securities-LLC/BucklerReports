@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>18.4.11506.43</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-03-03T15:04:09.9350801Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-03-16T17:05:52.2758613Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -628,14 +628,14 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="TransNum">
+                        <Textbox Name="AccountNumber">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!TransNum.Value</Value>
+                                  <Value>=Fields!AccountNumber.Value</Value>
                                   <Style>
                                     <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
                                     <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
@@ -647,7 +647,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>TransNum</rd:DefaultName>
+                          <rd:DefaultName>AccountNumber</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1137,7 +1137,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Commission.Value</Value>
+                                  <Value>=Fields!Location.Value</Value>
                                   <Style>
                                     <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -1146,7 +1146,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1487,6 +1487,35 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Entity: " + Parameters!Entity.Value
++ ", Trader: " + Parameters!Trader.Value</Value>
+                      <Style>
+                        <FontSize>7.5pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Account Number: " + IIF(IsNothing(Parameters!AccountNumber.Value), "N/A", Parameters!AccountNumber.Value)</Value>
+                      <Style>
+                        <FontSize>7.5pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
                     <TextRun>
                       <Value xml:space="preserve">
 </Value>
@@ -1516,9 +1545,9 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Left>21.68334in</Left>
-              <Height>0.28299in</Height>
-              <Width>2.19432in</Width>
+              <Left>21.15209in</Left>
+              <Height>0.57083in</Height>
+              <Width>2.72557in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1757,7 +1786,7 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>TRANS NUM</Value>
+                      <Value>ACCOUNT NO</Value>
                       <Style>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
                         <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
@@ -2569,7 +2598,7 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>COMM</Value>
+                      <Value>LOCATION</Value>
                       <Style>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
                         <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
