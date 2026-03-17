@@ -2886,7 +2886,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(IIF(Fields!Quantity.Value &gt; 0, Fields!Quantity.Value, Nothing))</Value>
+                                  <Value>=Sum(IIF(Fields!Quantity.Value &gt; 0 Or Fields!BuySell.Value = "B", Fields!Quantity.Value, Nothing))</Value>
                                   <Style>
                                     <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
                                     <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
@@ -2927,7 +2927,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(IIF(Fields!Quantity.Value &lt; 0, Fields!Quantity.Value, Nothing))</Value>
+                                  <Value>=Sum(IIF(Fields!Quantity.Value &lt; 0 Or Fields!BuySell.Value = "S", Fields!Quantity.Value, Nothing))</Value>
                                   <Style>
                                     <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
                                     <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
@@ -4390,7 +4390,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(IIF(Fields!NetMoney.Value &gt; 0, Fields!NetMoney.Value, Nothing))</Value>
+                                  <Value>=Sum(IIF(Fields!NetMoney.Value &gt; 0 Or Fields!BuySell.Value = "B", Fields!NetMoney.Value, Nothing))</Value>
                                   <Style>
                                     <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
                                     <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
@@ -4431,7 +4431,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(IIF(Fields!NetMoney.Value &lt; 0, Fields!NetMoney.Value, Nothing))</Value>
+                                  <Value>=Sum(IIF(Fields!NetMoney.Value &lt; 0 Or Fields!BuySell.Value = "S", Fields!NetMoney.Value, Nothing))</Value>
                                   <Style>
                                     <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
                                     <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
@@ -4460,6 +4460,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                           </Style>
                         </Textbox>
                         <ColSpan>2</ColSpan>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
