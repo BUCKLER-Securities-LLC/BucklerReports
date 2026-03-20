@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>18.4.11506.43</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-03-13T17:51:09.3052947Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-03-20T14:28:09.7583014Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -92,6 +92,9 @@
           </QueryParameter>
           <QueryParameter Name="@Trader">
             <Value>=Parameters!Trader.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@WiOnly">
+            <Value>=Parameters!WiOnly.Value</Value>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
@@ -200,6 +203,14 @@
         </Field>
         <Field Name="AdjustedPrincipal">
           <DataField>AdjustedPrincipal</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Wi">
+          <DataField>Wi</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrevMonthUnrealized">
+          <DataField>PrevMonthUnrealized</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
       </Fields>
@@ -512,7 +523,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>12</ColSpan>
+                        <ColSpan>8</ColSpan>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
@@ -522,7 +533,43 @@
                     <TablixCell />
                     <TablixCell />
                     <TablixCell />
-                    <TablixCell />
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Trader4">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>="Prev Month Unrealized: " + Format(Sum(Fields!PrevMonthUnrealized.Value), "F2")</Value>
+                                  <Style>
+                                    <FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+                                    <FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
+                                    <Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Trader2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>=First(Fields!GroupHeaderBackCol.Value, "reportformat")</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>4</ColSpan>
+                      </CellContents>
+                    </TablixCell>
                     <TablixCell />
                     <TablixCell />
                     <TablixCell />
@@ -3897,6 +3944,13 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
       </DefaultValue>
       <Prompt>Trader</Prompt>
     </ReportParameter>
+    <ReportParameter Name="WiOnly">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Wi Only</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -3932,6 +3986,11 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>1</RowIndex>
           <ParameterName>Trader</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>WiOnly</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
