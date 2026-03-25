@@ -7,9 +7,9 @@
     </am:CreatedBy>
     <am:UpdatedBy>
       <am:Name>SSDTRS</am:Name>
-      <am:Version>18.4.11506.43</am:Version>
+      <am:Version>17.14.36811.4</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-03-16T19:06:07.2228659Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-03-25T14:03:37.9083710Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -377,10 +377,10 @@
                   <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.35in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.14583in</Width>
+                  <Width>1.35in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1in</Width>
@@ -409,7 +409,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -447,7 +447,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -505,7 +505,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -710,7 +710,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -823,7 +823,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1569,7 +1569,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1646,7 +1646,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1685,7 +1685,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -2146,17 +2146,17 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
             <RepeatRowHeaders>true</RepeatRowHeaders>
             <DataSetName>MainreportDS</DataSetName>
             <Height>1.88542in</Height>
-            <Width>9.33182in</Width>
+            <Width>9.88599in</Width>
             <Style />
           </Tablix>
         </ReportItems>
         <Height>1.88542in</Height>
         <Style />
       </Body>
-      <Width>9.33182in</Width>
+      <Width>9.91724in</Width>
       <Page>
         <PageHeader>
-          <Height>1.04042in</Height>
+          <Height>1.10292in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -2180,7 +2180,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                 </Paragraph>
               </Paragraphs>
               <Top>0.0191in</Top>
-              <Left>3.49492in</Left>
+              <Left>3.85742in</Left>
               <Height>0.55173in</Height>
               <Width>2.20239in</Width>
               <Style>
@@ -2271,7 +2271,7 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>="Settlement Date: " + 
+                      <Value>="As Of Date: " + 
 FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                       <Style>
                         <FontSize>7.5pt</FontSize>
@@ -2337,7 +2337,7 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.0191in</Top>
-              <Left>6.60625in</Left>
+              <Left>7.16042in</Left>
               <Height>0.57083in</Height>
               <Width>2.72557in</Width>
               <ZIndex>3</ZIndex>
@@ -2360,7 +2360,7 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>0.23472in</Height>
+          <Height>0.25556in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -2385,8 +2385,7 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>0.02083in</Top>
-              <Left>8.35265in</Left>
+              <Left>8.90682in</Left>
               <Height>0.21389in</Height>
               <Width>0.97917in</Width>
               <Style>
@@ -2411,7 +2410,7 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
           </Style>
         </PageFooter>
         <PageHeight>8.78in</PageHeight>
-        <PageWidth>9.83in</PageWidth>
+        <PageWidth>10.45in</PageWidth>
         <LeftMargin>0.25in</LeftMargin>
         <RightMargin>0.25in</RightMargin>
         <TopMargin>0.25in</TopMargin>
