@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>18.4.11506.43</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-03-16T19:04:25.5880099Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-03-26T11:14:33.1365202Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -1391,6 +1391,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                           </Style>
                         </Textbox>
                         <ColSpan>9</ColSpan>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
@@ -2128,7 +2129,7 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>="Settlement Date: " + 
+                      <Value>="As Of Date: " + 
 FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                       <Style>
                         <FontSize>7.5pt</FontSize>

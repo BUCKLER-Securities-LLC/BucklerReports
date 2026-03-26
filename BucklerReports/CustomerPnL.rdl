@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>18.4.11506.43</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-03-16T19:02:51.7623343Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-03-26T11:09:45.6683767Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -265,6 +265,42 @@
         <Field Name="TradingMTDProfitLoss">
           <DataField>TradingMTDProfitLoss</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="FinancePos">
+          <DataField>FinancePos</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="FinanceDollar">
+          <DataField>FinanceDollar</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Financing">
+          <DataField>Financing</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Rate">
+          <DataField>Rate</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SystemDate">
+          <DataField>SystemDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TodaysClosingCost">
+          <DataField>TodaysClosingCost</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ID1Y_1D95_VaR">
+          <DataField>1Y_1D95_VaR</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ID1Y_1D99_VaR">
+          <DataField>1Y_1D99_VaR</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PrevMonthUnrealized">
+          <DataField>PrevMonthUnrealized</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
@@ -4557,7 +4593,7 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>="Settlement Date: " + 
+                      <Value>="As Of Date: " + 
 FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                       <Style>
                         <FontSize>7.5pt</FontSize>

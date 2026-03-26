@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>18.4.11506.43</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-03-20T14:28:09.7583014Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-03-26T11:17:10.9716391Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -3747,7 +3747,7 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>="Settlement Date: " + 
+                      <Value>="As Of Date: " + 
 FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                       <Style>
                         <FontSize>7.5pt</FontSize>
