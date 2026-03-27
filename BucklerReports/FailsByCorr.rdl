@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.14.36717.8</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-03-27T17:35:00.8760834Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-03-27T17:38:41.3587354Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -94,7 +94,7 @@
             <Value>=Parameters!Trader.Value</Value>
           </QueryParameter>
           <QueryParameter Name="@ReportType">
-            <Value>="Firm"</Value>
+            <Value>="Corr"</Value>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
@@ -4585,7 +4585,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Fails by Account</Value>
+                      <Value>Fails by Correspondent</Value>
                       <Style>
                         <FontSize>18pt</FontSize>
                         <FontWeight>Bold</FontWeight>
