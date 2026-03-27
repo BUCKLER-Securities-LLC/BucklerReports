@@ -62,6 +62,7 @@
     <Report Include="FISOutstandingRepoBlotter.rdl" />
     <Report Include="FISPendingOutright.rdl" />
     <Report Include="FISTradeBlotter.rdl" />
+    <Report Include="FISTrialBalance.rdl" />
     <Report Include="StockRecord.rdl" />
     <Report Include="TDPnL.rdl" />
     <Report Include="TemplateReportsGroup.rdl" />
