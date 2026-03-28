@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>18.4.11506.43</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-03-28T12:38:47.3146085Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-03-28T14:53:52.3827458Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -448,7 +448,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                                   <Style>
                                     <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
                                     <Format>n2</Format>
-                                    <Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+                                    <Color>=IIF(Fields!CurrentBalance.Value &gt; 0, "Green", IIF(Fields!CurrentBalance.Value &lt; 0, "Red", First(Fields!RowForeCol.Value, "reportformat")))</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -650,6 +650,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                                     <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
                                     <FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
+                                    <Format>0.00;(0.00)</Format>
                                     <Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
                                   </Style>
                                 </TextRun>
@@ -688,6 +689,7 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                                     <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
                                     <FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
+                                    <Format>0.00;(0.00)</Format>
                                     <Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
                                   </Style>
                                 </TextRun>
