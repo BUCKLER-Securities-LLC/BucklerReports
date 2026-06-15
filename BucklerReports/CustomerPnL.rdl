@@ -7,9 +7,9 @@
     </am:CreatedBy>
     <am:UpdatedBy>
       <am:Name>SSDTRS</am:Name>
-      <am:Version>17.14.36717.8</am:Version>
+      <am:Version>17.14.36811.4</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-03-27T18:28:46.0744228Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-06-15T18:30:41.5193188Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -663,9 +663,11 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat"))</BackgroundColor>
+                            <BackgroundColor>
+															=IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat"))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -698,9 +700,11 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat"))</BackgroundColor>
+                            <BackgroundColor>
+															=IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat"))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -737,9 +741,11 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat"))</BackgroundColor>
+                            <BackgroundColor>
+															=IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat"))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -776,9 +782,11 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat"))</BackgroundColor>
+                            <BackgroundColor>
+															=IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat"))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -812,9 +820,11 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat"))</BackgroundColor>
+                            <BackgroundColor>
+															=IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat"))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -848,9 +858,11 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat"))</BackgroundColor>
+                            <BackgroundColor>
+															=IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat"))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -884,9 +896,11 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat"))</BackgroundColor>
+                            <BackgroundColor>
+															=IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat"))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -923,9 +937,11 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat"))</BackgroundColor>
+                            <BackgroundColor>
+															=IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat"))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3930,9 +3946,11 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat"))</BackgroundColor>
+                            <BackgroundColor>
+															=IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat"))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -4126,10 +4144,12 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=
-iif(Parameters!Entity.Value="All","",
-First(Fields!Entity_Name.Value, "NameandAddress") + IIF( 
-UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
+                      <Value>
+												=
+												iif(Parameters!Entity.Value="All","",
+												First(Fields!Entity_Name.Value, "NameandAddress") + IIF(
+												UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))
+											</Value>
                       <Style>
                         <FontFamily>ARIAL</FontFamily>
                         <FontSize>7.5pt</FontSize>
@@ -4146,8 +4166,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                       </Style>
                     </TextRun>
                     <TextRun>
-                      <Value>=iif(Parameters!Entity.Value="All","",First (Fields!FullAddress.Value, 
-"NameandAddress"))</Value>
+                      <Value>
+												=iif(Parameters!Entity.Value="All","",First (Fields!FullAddress.Value,
+												"NameandAddress"))
+											</Value>
                       <Style>
                         <FontSize>7.5pt</FontSize>
                       </Style>
@@ -4256,7 +4278,7 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Security</Value>
+                      <Value>SECURITY</Value>
                       <Style>
                         <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
@@ -4433,7 +4455,7 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>T/D P &amp;L</Value>
+                      <Value>T/D P&amp;L</Value>
                       <Style>
                         <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
@@ -4669,8 +4691,10 @@ UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>="As Of Date: " + 
-FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
+                      <Value>
+												="As Of Date: " +
+												FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)
+											</Value>
                       <Style>
                         <FontSize>7.5pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -4684,8 +4708,10 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>="Entity: " + Parameters!Entity.Value
-+ ", Trader: " + Parameters!Trader.Value</Value>
+                      <Value>
+												="Entity: " + Parameters!Entity.Value
+												+ ", Trader: " + Parameters!Trader.Value
+											</Value>
                       <Style>
                         <FontSize>7.5pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -4768,8 +4794,10 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>="Page " +Globals!PageNumber.ToString ()+" of 
-"+Globals!TotalPages.ToString()</Value>
+                      <Value>
+												="Page " +Globals!PageNumber.ToString ()+" of
+												"+Globals!TotalPages.ToString()
+											</Value>
                       <Style>
                         <FontFamily>arial</FontFamily>
                         <FontSize>7.5pt</FontSize>
