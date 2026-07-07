@@ -1,0 +1,4671 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily" xmlns:am="http://schemas.microsoft.com/sqlserver/reporting/authoringmetadata">
+	<am:AuthoringMetadata>
+		<am:CreatedBy>
+			<am:Name>SSDTRS</am:Name>
+			<am:Version>17.14.36623.8</am:Version>
+		</am:CreatedBy>
+		<am:UpdatedBy>
+			<am:Name>SSDTRS</am:Name>
+			<am:Version>17.14.36717.8</am:Version>
+		</am:UpdatedBy>
+		<am:LastModifiedTimestamp>2026-07-07T11:56:56.1212412Z</am:LastModifiedTimestamp>
+	</am:AuthoringMetadata>
+	<df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+	<AutoRefresh>0</AutoRefresh>
+	<DataSources>
+		<DataSource Name="ReportDatabase">
+			<DataSourceReference>ReportDatabase</DataSourceReference>
+			<rd:SecurityType>None</rd:SecurityType>
+			<rd:DataSourceID>6845b7db-d343-4bfa-b17b-cd541ca59685</rd:DataSourceID>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="NameandAddress">
+			<Query>
+				<DataSourceName>ReportDatabase</DataSourceName>
+				<QueryParameters>
+					<QueryParameter Name="@Entity">
+						<Value>=Parameters!Entity.Value</Value>
+					</QueryParameter>
+				</QueryParameters>
+				<CommandType>StoredProcedure</CommandType>
+				<CommandText>get_Name_Address</CommandText>
+			</Query>
+			<Fields>
+				<Field Name="Entity">
+					<DataField>Entity</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="Entity_Name">
+					<DataField>Entity Name</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="AddressLine1">
+					<DataField>AddressLine1</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="AddressLine2">
+					<DataField>AddressLine2</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="AddressLine3">
+					<DataField>AddressLine3</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="AddressLine4">
+					<DataField>AddressLine4</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="FullAddress">
+					<DataField>FullAddress</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="EntityLogo">
+					<DataField>EntityLogo</DataField>
+					<rd:TypeName>System.Byte[]</rd:TypeName>
+				</Field>
+				<Field Name="MimeType">
+					<DataField>MimeType</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+			</Fields>
+		</DataSet>
+		<DataSet Name="MainreportDS">
+			<Query>
+				<DataSourceName>ReportDatabase</DataSourceName>
+				<QueryParameters>
+					<QueryParameter Name="@systemdate">
+						<Value>=Parameters!SystemDate.Value</Value>
+					</QueryParameter>
+				</QueryParameters>
+				<CommandType>StoredProcedure</CommandType>
+				<CommandText>recon_Pnl_calc</CommandText>
+			</Query>
+			<Fields>
+				<Field Name="SystemDate">
+					<DataField>SystemDate</DataField>
+					<rd:TypeName>System.DateTime</rd:TypeName>
+				</Field>
+				<Field Name="Entity">
+					<DataField>Entity</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="CUSIPNumber">
+					<DataField>CUSIPNumber</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="AccountNumber">
+					<DataField>AccountNumber</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="SortOrder">
+					<DataField>SortOrder</DataField>
+					<rd:TypeName>System.Int32</rd:TypeName>
+				</Field>
+				<Field Name="RecordType">
+					<DataField>RecordType</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="Trader">
+					<DataField>Trader</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="TransactionNumber">
+					<DataField>TransactionNumber</DataField>
+					<rd:TypeName>System.Int32</rd:TypeName>
+				</Field>
+				<Field Name="Side">
+					<DataField>Side</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="CostBasis">
+					<DataField>CostBasis</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="Calculated_FIFO_PnL">
+					<DataField>Calculated_FIFO_PnL</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="Posted_TradePnL">
+					<DataField>Posted_TradePnL</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="PnL_Variance">
+					<DataField>PnL_Variance</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="Accretion">
+					<DataField>Accretion</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="Running_Position_Qty">
+					<DataField>Running_Position_Qty</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="Quantity">
+					<DataField>Quantity</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="Running_Position_Cost">
+					<DataField>Running_Position_Cost</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="Running_Avg_Cost">
+					<DataField>Running_Avg_Cost</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="Price">
+					<DataField>Price</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="Running_Avg_Cost_Price">
+					<DataField>Running_Avg_Cost_Price</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="AvgCost_Realized_PnL">
+					<DataField>AvgCost_Realized_PnL</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="Record_Yield">
+					<DataField>Record_Yield</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="Days_To_Maturity">
+					<DataField>Days_To_Maturity</DataField>
+					<rd:TypeName>System.Int32</rd:TypeName>
+				</Field>
+				<Field Name="DayCount_Convention">
+					<DataField>DayCount_Convention</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="Conversion_Formula_Applied">
+					<DataField>Conversion_Formula_Applied</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="Detailed_Calculation_Breakdown">
+					<DataField>Detailed_Calculation_Breakdown</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="ProcessedDateTime">
+					<DataField>ProcessedDateTime</DataField>
+					<rd:TypeName>System.DateTime</rd:TypeName>
+				</Field>
+				<Field Name="ActivityDate">
+					<DataField>ActivityDate</DataField>
+					<rd:TypeName>System.DateTime</rd:TypeName>
+				</Field>
+				<Field Name="Trd_EntryDatetime">
+					<DataField>Trd_EntryDatetime</DataField>
+					<rd:TypeName>System.DateTime</rd:TypeName>
+				</Field>
+				<Field Name="BuySellIndicator">
+					<DataField>BuySellIndicator</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="InputPrice">
+					<DataField>InputPrice</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="ExecutionPrice">
+					<DataField>ExecutionPrice</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="TradePriceUsed">
+					<DataField>TradePriceUsed</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="PriorCostPriceUsed">
+					<DataField>PriorCostPriceUsed</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="posted">
+					<DataField>posted</DataField>
+					<rd:UserDefined>true</rd:UserDefined>
+				</Field>
+				<Field Name="calculated">
+					<DataField>calc</DataField>
+					<rd:UserDefined>true</rd:UserDefined>
+				</Field>
+				<Field Name="TradePosted">
+					<DataField>TradePosted</DataField>
+					<rd:UserDefined>true</rd:UserDefined>
+				</Field>
+			</Fields>
+		</DataSet>
+		<DataSet Name="reportformat">
+			<Query>
+				<DataSourceName>ReportDatabase</DataSourceName>
+				<QueryParameters>
+					<QueryParameter Name="@Entity">
+						<Value>=Parameters!Entity.Value</Value>
+					</QueryParameter>
+				</QueryParameters>
+				<CommandType>StoredProcedure</CommandType>
+				<CommandText>report_style</CommandText>
+			</Query>
+			<Fields>
+				<Field Name="EntityCode">
+					<DataField>EntityCode</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="EntityLogo">
+					<DataField>EntityLogo</DataField>
+					<rd:TypeName>System.Byte[]</rd:TypeName>
+				</Field>
+				<Field Name="MimeType">
+					<DataField>MimeType</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="ReportHeaderBackCol">
+					<DataField>ReportHeaderBackCol</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="EntityName">
+					<DataField>EntityName</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="GroupHeaderBackCol">
+					<DataField>GroupHeaderBackCol</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="DisclaimerText">
+					<DataField>DisclaimerText</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="ReportHeaderForeCol">
+					<DataField>ReportHeaderForeCol</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="GroupHeaderForeCol">
+					<DataField>GroupHeaderForeCol</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="ReportHeaderFont">
+					<DataField>ReportHeaderFont</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="GroupHeaderFont">
+					<DataField>GroupHeaderFont</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="ReportHeaderSize">
+					<DataField>ReportHeaderSize</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="GroupHeaderWeight">
+					<DataField>GroupHeaderWeight</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="ReportHeaderWeight">
+					<DataField>ReportHeaderWeight</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="RowBackCol">
+					<DataField>RowBackCol</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="RowForeCol">
+					<DataField>RowForeCol</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="AltRowBackCol">
+					<DataField>AltRowBackCol</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="ResetAltAtGroup">
+					<DataField>ResetAltAtGroup</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="RowFont">
+					<DataField>RowFont</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="GroupHeaderSize">
+					<DataField>GroupHeaderSize</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="GroupFooterBackCol">
+					<DataField>GroupFooterBackCol</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="RowWeight">
+					<DataField>RowWeight</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="GroupFooterForeCol">
+					<DataField>GroupFooterForeCol</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="GroupFooterWeight">
+					<DataField>GroupFooterWeight</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="ReportFooterBackCol">
+					<DataField>ReportFooterBackCol</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="RowSize">
+					<DataField>RowSize</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="ReportFooterForeCol">
+					<DataField>ReportFooterForeCol</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="ReportFooterStyle">
+					<DataField>ReportFooterStyle</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="GroupFooterFont">
+					<DataField>GroupFooterFont</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="GroupFooterSize">
+					<DataField>GroupFooterSize</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="ReportFooterFont">
+					<DataField>ReportFooterFont</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="ReportFooterWeight">
+					<DataField>ReportFooterWeight</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="ReportFooterSize">
+					<DataField>ReportFooterSize</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+			</Fields>
+		</DataSet>
+		<DataSet Name="Disclaimer">
+			<Query>
+				<DataSourceName>ReportDatabase</DataSourceName>
+				<QueryParameters>
+					<QueryParameter Name="@Entity">
+						<Value>=Parameters!Entity.Value</Value>
+					</QueryParameter>
+				</QueryParameters>
+				<CommandType>StoredProcedure</CommandType>
+				<CommandText>get_Entity_Disclaimer</CommandText>
+			</Query>
+			<Fields>
+				<Field Name="DisclaimerText">
+					<DataField>DisclaimerText</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="PolicyRef">
+					<DataField>PolicyRef</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="StatementDate">
+					<DataField>StatementDate</DataField>
+					<rd:TypeName>System.DateTime</rd:TypeName>
+				</Field>
+			</Fields>
+		</DataSet>
+	</DataSets>
+	<ReportSections>
+		<ReportSection>
+			<Body>
+				<ReportItems>
+					<Tablix Name="Tablix2">
+						<TablixBody>
+							<TablixColumns>
+								<TablixColumn>
+									<Width>1in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.24583in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>3.19792in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>0.85833in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.1in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.41667in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.38871in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.37917in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.23333in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.89255in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.63628in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.54611in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.60833in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.2375in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.99583in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.44583in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.52083in</Width>
+								</TablixColumn>
+							</TablixColumns>
+							<TablixRows>
+								<TablixRow>
+									<Height>0.25in</Height>
+									<TablixCells>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox44">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Entity</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox32</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox61">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Trader</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox33</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox171">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Account Number</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox170</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox72">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>CUSIPNumber</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox34</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox69">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Record Type</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox35</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox70">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Transaction Number</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox36</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox71">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Side</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox37</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox8">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Quantity</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox6</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox162">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Price</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox160</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox78">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Cost Basis</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox38</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox79">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Calculated FIFO Pn L</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox39</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox80">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Posted Trade Pn L</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox40</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox81">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Pn L Variance</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox41</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox87">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Running Position Qty</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox43</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox63">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Running Position Cost</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox45</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox66">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Running Avg Cost</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox46</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox93">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Avg Cost Realized Pn L</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox47</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox101">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Activity Date</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox54</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox102">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Trd Entry Datetime</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox55</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox104">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Input Price</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox57</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox105">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Execution Price</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox58</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox106">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Trade Price Used</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox59</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox107">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Prior Cost Price Used</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox60</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+									</TablixCells>
+								</TablixRow>
+								<TablixRow>
+									<Height>0.25in</Height>
+									<TablixCells>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Group2">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!Entity.Value +":"+ Fields!Trader.Value +":"+ Fields!CUSIPNumber.Value</Value>
+																	<Style>
+																		<FontFamily>Arial</FontFamily>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style />
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Group1</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+												<ColSpan>2</ColSpan>
+											</CellContents>
+										</TablixCell>
+										<TablixCell />
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1302">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1302</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1303">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1303</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1304">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1304</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1305">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1305</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1306">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1306</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1307">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1307</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1308">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1308</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1309">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1309</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1310">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1310</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1311">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1311</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1312">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1312</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1313">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1313</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1314">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1314</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1315">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1315</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1316">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1316</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1317">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1317</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1318">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1318</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1320">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1320</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1321">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1321</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1322">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1322</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1323">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1323</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+									</TablixCells>
+								</TablixRow>
+								<TablixRow>
+									<Height>0.25in</Height>
+									<TablixCells>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Entity3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!Entity.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Entity1</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Trader3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!Trader.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Trader</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="AccountNumber3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!AccountNumber.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.00;(#,0.00)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>AccountNumber</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="CUSIPNumber4">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!CUSIPNumber.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.00;(#,0.00)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>CUSIPNumber</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="RecordType3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!RecordType.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>RecordType</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="TransactionNumber3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!TransactionNumber.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>0;(0)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>TransactionNumber</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Side3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!Side.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Side</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Quantity4">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!Quantity.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.00;(#,0.00)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Quantity</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Price4">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!Price.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.0000000000;(#,0.0000000000)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Price</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="CostBasis3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!CostBasis.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>##,0.00;(#,0.00)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>CostBasis</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Calculated_FIFO_PnL3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!Calculated_FIFO_PnL.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.00;(#,0.00)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Calculated_FIFO_PnL</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Posted_TradePnL3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!Posted_TradePnL.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.00;(#,0.00)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Posted_TradePnL</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="PnL_Variance3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!PnL_Variance.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.00;(#,0.00)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>PnL_Variance</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Running_Position_Qty3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!Running_Position_Qty.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.00;(#,0.00)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Running_Position_Qty</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Running_Position_Cost3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!Running_Position_Cost.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.00;(#,0.00)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Running_Position_Cost</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Running_Avg_Cost3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!Running_Avg_Cost.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.00;(#,0.00)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Running_Avg_Cost</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="AvgCost_Realized_PnL3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!AvgCost_Realized_PnL.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.00;(#,0.00)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>AvgCost_Realized_PnL</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="ActivityDate3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!ActivityDate.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>d</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>ActivityDate</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Trd_EntryDatetime3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!Trd_EntryDatetime.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>g</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Trd_EntryDatetime</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="InputPrice3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!InputPrice.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.0000000000;(#,0.0000000000)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>InputPrice</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="ExecutionPrice3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!ExecutionPrice.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.0000000000;(#,0.0000000000)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>ExecutionPrice</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="TradePriceUsed3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!TradePriceUsed.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.0000000000;(#,0.0000000000)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>TradePriceUsed</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="PriorCostPriceUsed3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Fields!PriorCostPriceUsed.Value</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.0000000000;(#,0.0000000000)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>PriorCostPriceUsed</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+									</TablixCells>
+								</TablixRow>
+								<TablixRow>
+									<Height>0.22292in</Height>
+									<TablixCells>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1274">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1274</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1275">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1275</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1276">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1276</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1277">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1277</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1278">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1278</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1279">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1279</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1280">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1280</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1281">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1281</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1282">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1282</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1283">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1283</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1284">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1284</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1285">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1285</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1286">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1286</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1287">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1287</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1288">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1288</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1289">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1289</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1290">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1290</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1291">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1291</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1292">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1292</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1294">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1294</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1295">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1295</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1296">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1296</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox1297">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value />
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1297</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+									</TablixCells>
+								</TablixRow>
+							</TablixRows>
+						</TablixBody>
+						<TablixColumnHierarchy>
+							<TablixMembers>
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+							</TablixMembers>
+						</TablixColumnHierarchy>
+						<TablixRowHierarchy>
+							<TablixMembers>
+								<TablixMember />
+								<TablixMember>
+									<Group Name="Group1">
+										<GroupExpressions>
+											<GroupExpression>= Fields!Entity.Value+Fields!Trader.Value+Fields!CUSIPNumber.Value</GroupExpression>
+										</GroupExpressions>
+									</Group>
+									<SortExpressions>
+										<SortExpression>
+											<Value>= Fields!Entity.Value+Fields!Trader.Value+Fields!CUSIPNumber.Value</Value>
+										</SortExpression>
+									</SortExpressions>
+									<TablixMembers>
+										<TablixMember>
+											<KeepWithGroup>After</KeepWithGroup>
+										</TablixMember>
+										<TablixMember>
+											<Group Name="Details" />
+										</TablixMember>
+										<TablixMember>
+											<KeepWithGroup>Before</KeepWithGroup>
+										</TablixMember>
+									</TablixMembers>
+								</TablixMember>
+							</TablixMembers>
+						</TablixRowHierarchy>
+						<DataSetName>MainreportDS</DataSetName>
+						<Top>0.72291in</Top>
+						<Left>0.10335in</Left>
+						<Height>0.97292in</Height>
+						<Width>31.70322in</Width>
+						<Style>
+							<Border>
+								<Style>None</Style>
+							</Border>
+						</Style>
+					</Tablix>
+					<Tablix Name="Tablix7">
+						<TablixBody>
+							<TablixColumns>
+								<TablixColumn>
+									<Width>1.29167in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.23958in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.21458in</Width>
+								</TablixColumn>
+								<TablixColumn>
+									<Width>1.44792in</Width>
+								</TablixColumn>
+							</TablixColumns>
+							<TablixRows>
+								<TablixRow>
+									<Height>0.25in</Height>
+									<TablixCells>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox18">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Trade Posted(FIS)</Value>
+																	<Style>
+																		<FontFamily>Arial</FontFamily>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox16</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox20">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>EOD Posted(FIS)</Value>
+																	<Style>
+																		<FontFamily>Arial</FontFamily>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox18</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox22">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Calculated</Value>
+																	<Style>
+																		<FontFamily>Arial</FontFamily>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox20</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox120">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>Variance</Value>
+																	<Style>
+																		<FontFamily>Arial</FontFamily>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox120</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+									</TablixCells>
+								</TablixRow>
+								<TablixRow>
+									<Height>0.25in</Height>
+									<TablixCells>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="TradePosted3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Sum(Fields!TradePosted.Value)</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.00;(#,0.00)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>TradePosted</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="posted3">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Sum(Fields!posted.Value)</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.00;(#,0.00)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>posted</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="calculated4">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=Sum(Fields!calculated.Value)</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.00;(#,0.00)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>calculated</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+										<TablixCell>
+											<CellContents>
+												<Textbox Name="Textbox121">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>=sum(Fields!calculated.Value-Fields!posted.Value)</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																		<Format>#,0.00;(#,0.00)</Format>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox121</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+											</CellContents>
+										</TablixCell>
+									</TablixCells>
+								</TablixRow>
+							</TablixRows>
+						</TablixBody>
+						<TablixColumnHierarchy>
+							<TablixMembers>
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+								<TablixMember />
+							</TablixMembers>
+						</TablixColumnHierarchy>
+						<TablixRowHierarchy>
+							<TablixMembers>
+								<TablixMember>
+									<TablixHeader>
+										<Size>2.47917in</Size>
+										<CellContents>
+											<Textbox Name="Textbox96">
+												<CanGrow>true</CanGrow>
+												<KeepTogether>true</KeepTogether>
+												<Paragraphs>
+													<Paragraph>
+														<TextRuns>
+															<TextRun>
+																<Value>Summary</Value>
+																<Style>
+																	<FontFamily>Arial</FontFamily>
+																</Style>
+															</TextRun>
+														</TextRuns>
+														<Style />
+													</Paragraph>
+												</Paragraphs>
+												<rd:DefaultName>Textbox96</rd:DefaultName>
+												<Style>
+													<Border>
+														<Color>LightGrey</Color>
+														<Style>Solid</Style>
+													</Border>
+													<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+													<PaddingLeft>2pt</PaddingLeft>
+													<PaddingRight>2pt</PaddingRight>
+													<PaddingTop>2pt</PaddingTop>
+													<PaddingBottom>2pt</PaddingBottom>
+												</Style>
+											</Textbox>
+										</CellContents>
+									</TablixHeader>
+									<TablixMembers>
+										<TablixMember />
+									</TablixMembers>
+									<KeepWithGroup>After</KeepWithGroup>
+								</TablixMember>
+								<TablixMember>
+									<Group Name="Group2">
+										<GroupExpressions>
+											<GroupExpression>=Fields!Entity.Value + ":" + Fields!Trader.Value + ":" + Fields!CUSIPNumber.Value</GroupExpression>
+										</GroupExpressions>
+									</Group>
+									<SortExpressions>
+										<SortExpression>
+											<Value>=Fields!Entity.Value + ":" + Fields!Trader.Value + ":" + Fields!CUSIPNumber.Value</Value>
+										</SortExpression>
+									</SortExpressions>
+									<TablixHeader>
+										<Size>2.47917in</Size>
+										<CellContents>
+											<Textbox Name="Group21">
+												<CanGrow>true</CanGrow>
+												<KeepTogether>true</KeepTogether>
+												<Paragraphs>
+													<Paragraph>
+														<TextRuns>
+															<TextRun>
+																<Value>=Fields!Entity.Value + ":" + Fields!Trader.Value + ":" + Fields!CUSIPNumber.Value</Value>
+																<Style>
+																	<FontFamily>=First(Fields!RowForeCol.Value, "reportformat")</FontFamily>
+																	<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																</Style>
+															</TextRun>
+														</TextRuns>
+														<Style />
+													</Paragraph>
+												</Paragraphs>
+												<rd:DefaultName>Group21</rd:DefaultName>
+												<Style>
+													<Border>
+														<Color>LightGrey</Color>
+														<Style>Solid</Style>
+													</Border>
+													<BackgroundColor>=IIF(RowNumber(Nothing) Mod 2 = 0, First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, "reportformat"))</BackgroundColor>
+													<PaddingLeft>2pt</PaddingLeft>
+													<PaddingRight>2pt</PaddingRight>
+													<PaddingTop>2pt</PaddingTop>
+													<PaddingBottom>2pt</PaddingBottom>
+												</Style>
+											</Textbox>
+										</CellContents>
+									</TablixHeader>
+									<TablixMembers>
+										<TablixMember />
+									</TablixMembers>
+								</TablixMember>
+							</TablixMembers>
+						</TablixRowHierarchy>
+						<DataSetName>MainreportDS</DataSetName>
+						<Top>0.06944in</Top>
+						<Left>0.10335in</Left>
+						<Height>0.5in</Height>
+						<Width>7.67292in</Width>
+						<ZIndex>1</ZIndex>
+						<Style>
+							<Border>
+								<Style>None</Style>
+							</Border>
+						</Style>
+					</Tablix>
+				</ReportItems>
+				<Height>1.90417in</Height>
+				<Style />
+			</Body>
+			<Width>31.83782in</Width>
+			<Page>
+				<PageHeader>
+					<Height>0.905in</Height>
+					<PrintOnFirstPage>true</PrintOnFirstPage>
+					<PrintOnLastPage>true</PrintOnLastPage>
+					<ReportItems>
+						<Textbox Name="TextboxreportTitle">
+							<CanGrow>true</CanGrow>
+							<KeepTogether>true</KeepTogether>
+							<Paragraphs>
+								<Paragraph>
+									<TextRuns>
+										<TextRun>
+											<Value>PNL Calculation</Value>
+											<Style>
+												<FontSize>18pt</FontSize>
+												<FontWeight>Bold</FontWeight>
+											</Style>
+										</TextRun>
+									</TextRuns>
+									<Style>
+										<TextAlign>Center</TextAlign>
+									</Style>
+								</Paragraph>
+							</Paragraphs>
+							<Top>0.0382in</Top>
+							<Left>12.84376in</Left>
+							<Height>0.55173in</Height>
+							<Width>6.15031in</Width>
+							<Style>
+								<Border>
+									<Style>None</Style>
+								</Border>
+								<PaddingLeft>2pt</PaddingLeft>
+								<PaddingRight>2pt</PaddingRight>
+								<PaddingTop>2pt</PaddingTop>
+								<PaddingBottom>2pt</PaddingBottom>
+							</Style>
+						</Textbox>
+						<Textbox Name="Textboxaddress">
+							<CanGrow>true</CanGrow>
+							<KeepTogether>true</KeepTogether>
+							<Paragraphs>
+								<Paragraph>
+									<TextRuns>
+										<TextRun>
+											<Value>
+												=
+												iif(Parameters!Entity.Value="All","",
+												First(Fields!Entity_Name.Value, "NameandAddress") + IIF(
+												UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))
+											</Value>
+											<Style>
+												<FontFamily>ARIAL</FontFamily>
+												<FontSize>7.5pt</FontSize>
+												<FontWeight>Bold</FontWeight>
+											</Style>
+										</TextRun>
+										<TextRun>
+											<Value xml:space="preserve">
+</Value>
+											<Style>
+												<FontFamily>ARIAL</FontFamily>
+												<FontSize>7.5pt</FontSize>
+												<FontWeight>Bold</FontWeight>
+											</Style>
+										</TextRun>
+										<TextRun>
+											<Value>
+												=iif(Parameters!Entity.Value="All","",First (Fields!FullAddress.Value,
+												"NameandAddress"))
+											</Value>
+											<Style>
+												<FontSize>7.5pt</FontSize>
+											</Style>
+										</TextRun>
+									</TextRuns>
+									<Style>
+										<TextAlign>Left</TextAlign>
+									</Style>
+								</Paragraph>
+							</Paragraphs>
+							<Top>0.0191in</Top>
+							<Left>0.86263in</Left>
+							<Height>0.55173in</Height>
+							<Width>1.29489in</Width>
+							<ZIndex>1</ZIndex>
+							<Style>
+								<Border>
+									<Style>None</Style>
+								</Border>
+								<BackgroundColor>White</BackgroundColor>
+								<VerticalAlign>Middle</VerticalAlign>
+								<PaddingLeft>2pt</PaddingLeft>
+								<PaddingRight>2pt</PaddingRight>
+								<PaddingTop>2pt</PaddingTop>
+								<PaddingBottom>2pt</PaddingBottom>
+							</Style>
+						</Textbox>
+						<Image Name="Imagecompany">
+							<Source>Database</Source>
+							<Value>=First(Fields!EntityLogo.Value, "reportformat")</Value>
+							<MIMEType>=First(Fields!MimeType.Value, "reportformat")</MIMEType>
+							<Sizing>FitProportional</Sizing>
+							<Top>0.0191in</Top>
+							<Left>0.00152in</Left>
+							<Height>0.55173in</Height>
+							<Width>0.79167in</Width>
+							<ZIndex>2</ZIndex>
+							<Style>
+								<Border>
+									<Style>None</Style>
+								</Border>
+							</Style>
+						</Image>
+						<Textbox Name="Textboxreportdate">
+							<CanGrow>true</CanGrow>
+							<KeepTogether>true</KeepTogether>
+							<Paragraphs>
+								<Paragraph>
+									<TextRuns>
+										<TextRun>
+											<Value>
+												="As Of Date: " +
+												FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)
+											</Value>
+											<Style>
+												<FontSize>7.5pt</FontSize>
+												<FontWeight>Bold</FontWeight>
+											</Style>
+										</TextRun>
+									</TextRuns>
+									<Style>
+										<TextAlign>Right</TextAlign>
+									</Style>
+								</Paragraph>
+								<Paragraph>
+									<TextRuns>
+										<TextRun>
+											<Value>
+												="Entity: " + Parameters!Entity.Value
+												+ ", Trader: " + Parameters!Trader.Value
+											</Value>
+											<Style>
+												<FontSize>7.5pt</FontSize>
+												<FontWeight>Bold</FontWeight>
+											</Style>
+										</TextRun>
+									</TextRuns>
+									<Style>
+										<TextAlign>Right</TextAlign>
+									</Style>
+								</Paragraph>
+								<Paragraph>
+									<TextRuns>
+										<TextRun>
+											<Value>="Account Number: " + IIF(IsNothing(Parameters!AccountNumber.Value), "N/A", Parameters!AccountNumber.Value)</Value>
+											<Style>
+												<FontSize>7.5pt</FontSize>
+												<FontWeight>Bold</FontWeight>
+											</Style>
+										</TextRun>
+										<TextRun>
+											<Value xml:space="preserve">
+</Value>
+											<Style>
+												<FontSize>7.5pt</FontSize>
+												<FontWeight>Bold</FontWeight>
+											</Style>
+										</TextRun>
+										<TextRun>
+											<Value>= "Run Date/Time: "</Value>
+											<Style>
+												<FontSize>7.5pt</FontSize>
+												<FontWeight>Bold</FontWeight>
+											</Style>
+										</TextRun>
+										<TextRun>
+											<Value>=Globals!ExecutionTime</Value>
+											<Style>
+												<FontSize>7.5pt</FontSize>
+												<FontWeight>Bold</FontWeight>
+												<Format>g</Format>
+											</Style>
+										</TextRun>
+									</TextRuns>
+									<Style>
+										<TextAlign>Right</TextAlign>
+									</Style>
+								</Paragraph>
+							</Paragraphs>
+							<Top>0.0382in</Top>
+							<Left>29.11225in</Left>
+							<Height>0.57083in</Height>
+							<Width>2.72557in</Width>
+							<ZIndex>3</ZIndex>
+							<Style>
+								<Border>
+									<Style>None</Style>
+								</Border>
+								<VerticalAlign>Top</VerticalAlign>
+								<PaddingLeft>2pt</PaddingLeft>
+								<PaddingRight>2pt</PaddingRight>
+								<PaddingTop>2pt</PaddingTop>
+								<PaddingBottom>2pt</PaddingBottom>
+							</Style>
+						</Textbox>
+					</ReportItems>
+					<Style>
+						<Border>
+							<Style>None</Style>
+						</Border>
+					</Style>
+				</PageHeader>
+				<PageFooter>
+					<Height>0.22778in</Height>
+					<PrintOnFirstPage>true</PrintOnFirstPage>
+					<PrintOnLastPage>true</PrintOnLastPage>
+					<ReportItems>
+						<Textbox Name="Textboxfooter">
+							<CanGrow>true</CanGrow>
+							<KeepTogether>true</KeepTogether>
+							<Paragraphs>
+								<Paragraph>
+									<TextRuns>
+										<TextRun>
+											<Value>
+												="Page " +Globals!PageNumber.ToString ()+" of
+												"+Globals!TotalPages.ToString()
+											</Value>
+											<Style>
+												<FontFamily>arial</FontFamily>
+												<FontSize>7.5pt</FontSize>
+												<Format>'$'#,0.00;('$'#,0.00)</Format>
+											</Style>
+										</TextRun>
+									</TextRuns>
+									<Style>
+										<TextAlign>Right</TextAlign>
+									</Style>
+								</Paragraph>
+							</Paragraphs>
+							<Top>0.01389in</Top>
+							<Left>30.85865in</Left>
+							<Height>0.21389in</Height>
+							<Width>0.97917in</Width>
+							<Style>
+								<Border>
+									<Style>None</Style>
+								</Border>
+								<PaddingLeft>2pt</PaddingLeft>
+								<PaddingRight>2pt</PaddingRight>
+								<PaddingTop>2pt</PaddingTop>
+								<PaddingBottom>2pt</PaddingBottom>
+								<rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
+							</Style>
+						</Textbox>
+					</ReportItems>
+					<Style>
+						<Border>
+							<Style>None</Style>
+						</Border>
+						<TopBorder>
+							<Style>Solid</Style>
+						</TopBorder>
+					</Style>
+				</PageFooter>
+				<PageHeight>8.78in</PageHeight>
+				<PageWidth>52in</PageWidth>
+				<LeftMargin>0.2in</LeftMargin>
+				<RightMargin>0.2in</RightMargin>
+				<TopMargin>0.2in</TopMargin>
+				<BottomMargin>0.2in</BottomMargin>
+				<Style />
+			</Page>
+		</ReportSection>
+	</ReportSections>
+	<ReportParameters>
+		<ReportParameter Name="SystemDate">
+			<DataType>DateTime</DataType>
+			<Nullable>true</Nullable>
+			<DefaultValue>
+				<Values>
+					<Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+				</Values>
+			</DefaultValue>
+			<Prompt>SystemDate</Prompt>
+		</ReportParameter>
+		<ReportParameter Name="Entity">
+			<DataType>String</DataType>
+			<DefaultValue>
+				<Values>
+					<Value>all</Value>
+				</Values>
+			</DefaultValue>
+			<Prompt>Entity</Prompt>
+		</ReportParameter>
+		<ReportParameter Name="AccountNumber">
+			<DataType>String</DataType>
+			<Nullable>true</Nullable>
+			<Prompt>AccountNumber</Prompt>
+		</ReportParameter>
+		<ReportParameter Name="FirmNumber">
+			<DataType>String</DataType>
+			<Nullable>true</Nullable>
+			<Prompt>FirmNumber</Prompt>
+		</ReportParameter>
+		<ReportParameter Name="UserName">
+			<DataType>String</DataType>
+			<Nullable>true</Nullable>
+			<DefaultValue>
+				<Values>
+					<Value>rptuser</Value>
+				</Values>
+			</DefaultValue>
+			<Prompt>UserName</Prompt>
+		</ReportParameter>
+		<ReportParameter Name="Trader">
+			<DataType>String</DataType>
+			<DefaultValue>
+				<Values>
+					<Value>all</Value>
+				</Values>
+			</DefaultValue>
+			<Prompt>Trader</Prompt>
+		</ReportParameter>
+	</ReportParameters>
+	<ReportParametersLayout>
+		<GridLayoutDefinition>
+			<NumberOfColumns>4</NumberOfColumns>
+			<NumberOfRows>2</NumberOfRows>
+			<CellDefinitions>
+				<CellDefinition>
+					<ColumnIndex>0</ColumnIndex>
+					<RowIndex>0</RowIndex>
+					<ParameterName>SystemDate</ParameterName>
+				</CellDefinition>
+				<CellDefinition>
+					<ColumnIndex>1</ColumnIndex>
+					<RowIndex>0</RowIndex>
+					<ParameterName>Entity</ParameterName>
+				</CellDefinition>
+				<CellDefinition>
+					<ColumnIndex>2</ColumnIndex>
+					<RowIndex>0</RowIndex>
+					<ParameterName>AccountNumber</ParameterName>
+				</CellDefinition>
+				<CellDefinition>
+					<ColumnIndex>3</ColumnIndex>
+					<RowIndex>0</RowIndex>
+					<ParameterName>FirmNumber</ParameterName>
+				</CellDefinition>
+				<CellDefinition>
+					<ColumnIndex>0</ColumnIndex>
+					<RowIndex>1</RowIndex>
+					<ParameterName>UserName</ParameterName>
+				</CellDefinition>
+				<CellDefinition>
+					<ColumnIndex>1</ColumnIndex>
+					<RowIndex>1</RowIndex>
+					<ParameterName>Trader</ParameterName>
+				</CellDefinition>
+			</CellDefinitions>
+		</GridLayoutDefinition>
+	</ReportParametersLayout>
+	<rd:ReportUnitType>Inch</rd:ReportUnitType>
+	<rd:ReportID>68f307a4-a6c6-4e8e-8f5f-2d50b5e381cb</rd:ReportID>
+</Report>
