@@ -7,9 +7,9 @@
     </am:CreatedBy>
     <am:UpdatedBy>
       <am:Name>SSDTRS</am:Name>
-      <am:Version>17.14.36717.8</am:Version>
+      <am:Version>17.14.36811.4</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-03-27T18:29:18.6261697Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-08-26T17:10:32.6614653Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -92,6 +92,10 @@
         <CommandText>rpt_get_cash_balance</CommandText>
       </Query>
       <Fields>
+        <Field Name="KeyValue">
+          <DataField>KeyValue</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="Entity">
           <DataField>Entity</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -323,19 +327,19 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.21in</Width>
+                  <Width>1.21556in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2725in</Width>
+                  <Width>1.27806in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.25167in</Width>
+                  <Width>1.25723in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.25167in</Width>
+                  <Width>1.25723in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.6475in</Width>
+                  <Width>1.65306in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -378,6 +382,7 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Detail_Currency">
+                          <CanGrow>true</CanGrow>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
@@ -573,20 +578,20 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
+            <NoRowsMessage>No Data Available</NoRowsMessage>
             <DataSetName>MainreportDS</DataSetName>
-            <Left>0.00001in</Left>
             <Height>0.5in</Height>
-            <Width>6.63334in</Width>
+            <Width>6.66114in</Width>
             <Style />
           </Tablix>
         </ReportItems>
-        <Height>0.52431in</Height>
+        <Height>0.5in</Height>
         <Style />
       </Body>
-      <Width>6.63335in</Width>
+      <Width>6.66114in</Width>
       <Page>
         <PageHeader>
-          <Height>1.13854in</Height>
+          <Height>1.3625in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -599,7 +604,7 @@
                     <TextRun>
                       <Value>Cash Balance</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>18pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -610,8 +615,8 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.03299in</Top>
-              <Left>2.49673in</Left>
-              <Height>0.26389in</Height>
+              <Left>2.52451in</Left>
+              <Height>0.40972in</Height>
               <Width>1.6399in</Width>
               <Style>
                 <Border>
@@ -661,7 +666,7 @@ First(Fields!Entity_Name.Value, "NameandAddress") + IIF( UCASE(Parameters!Accoun
                 </Paragraph>
               </Paragraphs>
               <Top>0.03299in</Top>
-              <Left>0.86112in</Left>
+              <Left>0.8889in</Left>
               <Height>0.55173in</Height>
               <Width>1.29489in</Width>
               <ZIndex>1</ZIndex>
@@ -683,7 +688,7 @@ First(Fields!Entity_Name.Value, "NameandAddress") + IIF( UCASE(Parameters!Accoun
               <MIMEType>=First(Fields!MimeType.Value, "reportformat")</MIMEType>
               <Sizing>FitProportional</Sizing>
               <Top>0.03299in</Top>
-              <Left>0.00001in</Left>
+              <Left>0.02779in</Left>
               <Height>0.55173in</Height>
               <Width>0.79167in</Width>
               <ZIndex>2</ZIndex>
@@ -766,7 +771,7 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.03299in</Top>
-              <Left>4.98584in</Left>
+              <Left>5.01362in</Left>
               <Height>0.57083in</Height>
               <Width>1.6475in</Width>
               <ZIndex>3</ZIndex>
@@ -782,6 +787,7 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
               </Style>
             </Textbox>
             <Textbox Name="Header_Entity2">
+              <CanGrow>true</CanGrow>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
@@ -795,38 +801,18 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Left</TextAlign>
+                    <TextAlign>Center</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>0.88854in</Top>
+              <Top>0.925in</Top>
               <Height>0.25in</Height>
-              <Width>1.21in</Width>
+              <Width>1.22389in</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
                 </Border>
-                <TopBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </TopBorder>
-                <BottomBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </BottomBorder>
-                <LeftBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </LeftBorder>
-                <RightBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </RightBorder>
                 <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
@@ -835,6 +821,7 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
               </Style>
             </Textbox>
             <Textbox Name="Header_Currency2">
+              <CanGrow>true</CanGrow>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
@@ -848,12 +835,12 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Left</TextAlign>
+                    <TextAlign>Center</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>0.88854in</Top>
-              <Left>1.21in</Left>
+              <Top>0.925in</Top>
+              <Left>1.23778in</Left>
               <Height>0.25in</Height>
               <Width>1.2725in</Width>
               <ZIndex>5</ZIndex>
@@ -861,26 +848,6 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                 <Border>
                   <Style>Solid</Style>
                 </Border>
-                <TopBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </TopBorder>
-                <BottomBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </BottomBorder>
-                <LeftBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </LeftBorder>
-                <RightBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </RightBorder>
                 <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
@@ -889,6 +856,7 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
               </Style>
             </Textbox>
             <Textbox Name="Header_Amount2">
+              <CanGrow>true</CanGrow>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
@@ -902,39 +870,19 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Left</TextAlign>
+                    <TextAlign>Center</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>0.88854in</Top>
-              <Left>2.4825in</Left>
+              <Top>0.925in</Top>
+              <Left>2.49361in</Left>
               <Height>0.25in</Height>
-              <Width>1.25167in</Width>
+              <Width>1.25723in</Width>
               <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
                 </Border>
-                <TopBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </TopBorder>
-                <BottomBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </BottomBorder>
-                <LeftBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </LeftBorder>
-                <RightBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </RightBorder>
                 <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
@@ -943,6 +891,7 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
               </Style>
             </Textbox>
             <Textbox Name="Header_ExchgRate2">
+              <CanGrow>true</CanGrow>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
@@ -956,39 +905,19 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Left</TextAlign>
+                    <TextAlign>Center</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>0.88854in</Top>
+              <Top>0.925in</Top>
               <Left>3.73417in</Left>
               <Height>0.25in</Height>
-              <Width>1.25167in</Width>
+              <Width>1.27389in</Width>
               <ZIndex>7</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
                 </Border>
-                <TopBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </TopBorder>
-                <BottomBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </BottomBorder>
-                <LeftBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </LeftBorder>
-                <RightBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </RightBorder>
                 <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
@@ -997,6 +926,7 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
               </Style>
             </Textbox>
             <Textbox Name="Header_UsdEquivalent2">
+              <CanGrow>true</CanGrow>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
@@ -1010,39 +940,19 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Left</TextAlign>
+                    <TextAlign>Center</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>0.88854in</Top>
-              <Left>4.98584in</Left>
+              <Top>0.925in</Top>
+              <Left>5.00806in</Left>
               <Height>0.25in</Height>
-              <Width>1.6475in</Width>
+              <Width>1.65308in</Width>
               <ZIndex>8</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
                 </Border>
-                <TopBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </TopBorder>
-                <BottomBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </BottomBorder>
-                <LeftBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </LeftBorder>
-                <RightBorder>
-                  <Color>Black</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </RightBorder>
                 <BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
@@ -1086,7 +996,7 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.01389in</Top>
-              <Left>4.26876in</Left>
+              <Left>4.29654in</Left>
               <Height>0.2in</Height>
               <Width>2.36458in</Width>
               <Style>
@@ -1110,11 +1020,12 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
             </TopBorder>
           </Style>
         </PageFooter>
-        <PageWidth>7.13in</PageWidth>
-        <LeftMargin>0.2in</LeftMargin>
-        <RightMargin>0.2in</RightMargin>
-        <TopMargin>0.25in</TopMargin>
-        <BottomMargin>0.25in</BottomMargin>
+        <PageHeight>7.13in</PageHeight>
+        <PageWidth>7.17in</PageWidth>
+        <LeftMargin>0.25in</LeftMargin>
+        <RightMargin>0.25in</RightMargin>
+        <TopMargin>0.2in</TopMargin>
+        <BottomMargin>0.2in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
