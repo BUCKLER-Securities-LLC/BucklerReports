@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.14.36811.4</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-09-02T11:38:21.7653949Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-09-14T12:28:19.8957507Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -5327,7 +5327,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.0191in</Top>
-              <Left>33.4419in</Left>
+              <Left>33.9419in</Left>
               <Height>0.55173in</Height>
               <Width>3.48364in</Width>
               <Style>
@@ -5905,7 +5905,7 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Left>67.64187in</Left>
+              <Left>68.64187in</Left>
               <Height>0.57083in</Height>
               <Width>2.72557in</Width>
               <ZIndex>10</ZIndex>
@@ -8194,7 +8194,8 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Left>69.38827in</Left>
+              <Top>0in</Top>
+              <Left>70.38827in</Left>
               <Height>0.21389in</Height>
               <Width>0.97917in</Width>
               <Style>
