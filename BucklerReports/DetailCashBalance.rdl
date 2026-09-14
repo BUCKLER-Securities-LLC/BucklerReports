@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.14.36811.4</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-08-18T17:18:51.0817362Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-09-14T12:17:13.5118610Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -375,13 +375,15 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=
-iif(Fields!orderby.Value =1 or Fields!orderby.Value =3,
-"LightSteelBlue"
-,
-IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat")))</BackgroundColor>
+                            <BackgroundColor>
+															=
+															iif(Fields!orderby.Value =1 or Fields!orderby.Value =3,
+															"LightSteelBlue"
+															,
+															IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat")))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -417,13 +419,15 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=
-iif(Fields!orderby.Value =1 or Fields!orderby.Value =3,
-"LightSteelBlue"
-,
-IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat")))</BackgroundColor>
+                            <BackgroundColor>
+															=
+															iif(Fields!orderby.Value =1 or Fields!orderby.Value =3,
+															"LightSteelBlue"
+															,
+															IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat")))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -459,13 +463,15 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=
-iif(Fields!orderby.Value =1 or Fields!orderby.Value =3,
-"LightSteelBlue"
-,
-IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat")))</BackgroundColor>
+                            <BackgroundColor>
+															=
+															iif(Fields!orderby.Value =1 or Fields!orderby.Value =3,
+															"LightSteelBlue"
+															,
+															IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat")))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -498,13 +504,15 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=
-iif(Fields!orderby.Value =1 or Fields!orderby.Value =3,
-"LightSteelBlue"
-,
-IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat")))</BackgroundColor>
+                            <BackgroundColor>
+															=
+															iif(Fields!orderby.Value =1 or Fields!orderby.Value =3,
+															"LightSteelBlue"
+															,
+															IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat")))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -538,13 +546,15 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=
-iif(Fields!orderby.Value =1 or Fields!orderby.Value =3,
-"LightSteelBlue"
-,
-IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat")))</BackgroundColor>
+                            <BackgroundColor>
+															=
+															iif(Fields!orderby.Value =1 or Fields!orderby.Value =3,
+															"LightSteelBlue"
+															,
+															IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat")))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -578,13 +588,15 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=
-iif(Fields!orderby.Value =1 or Fields!orderby.Value =3,
-"LightSteelBlue"
-,
-IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat")))</BackgroundColor>
+                            <BackgroundColor>
+															=
+															iif(Fields!orderby.Value =1 or Fields!orderby.Value =3,
+															"LightSteelBlue"
+															,
+															IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat")))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -618,13 +630,15 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=
-iif(Fields!orderby.Value =1 or Fields!orderby.Value =3,
-"LightSteelBlue"
-,
-IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat")))</BackgroundColor>
+                            <BackgroundColor>
+															=
+															iif(Fields!orderby.Value =1 or Fields!orderby.Value =3,
+															"LightSteelBlue"
+															,
+															IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat")))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -662,13 +676,15 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=
-iif(Fields!orderby.Value =1 or Fields!orderby.Value =3,
-"LightSteelBlue"
-,
-IIF(RowNumber(Nothing) Mod 2 = 0, 
-First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value, 
-"reportformat")))</BackgroundColor>
+                            <BackgroundColor>
+															=
+															iif(Fields!orderby.Value =1 or Fields!orderby.Value =3,
+															"LightSteelBlue"
+															,
+															IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat")))
+														</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1267,9 +1283,11 @@ First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>= sum(Fields!OpeningBalance.Value)+
-sum(Fields!Credit.Value)-
-sum(Fields!Debit.Value)</Value>
+                                  <Value>
+																		= sum(Fields!OpeningBalance.Value)+
+																		sum(Fields!Credit.Value)-
+																		sum(Fields!Debit.Value)
+																	</Value>
                                   <Style>
                                     <FontStyle>=First(Fields!GroupFooterFont.Value, "reportformat")</FontStyle>
                                     <FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
@@ -1387,9 +1405,11 @@ sum(Fields!Debit.Value)</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=
-iif(Parameters!Entity.Value="All","",
-First(Fields!Entity_Name.Value, "NameandAddress") + IIF( UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))</Value>
+                      <Value>
+												=
+												iif(Parameters!Entity.Value="All","",
+												First(Fields!Entity_Name.Value, "NameandAddress") + IIF( UCASE(Parameters!AccountNumber.Value) = "ALL" ,"" , " " ))
+											</Value>
                       <Style>
                         <FontFamily>ARIAL</FontFamily>
                         <FontSize>7.5pt</FontSize>
@@ -1457,8 +1477,10 @@ First(Fields!Entity_Name.Value, "NameandAddress") + IIF( UCASE(Parameters!Accoun
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>="As Of Date: " + 
-FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
+                      <Value>
+												="As Of Date: " +
+												FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)
+											</Value>
                       <Style>
                         <FontSize>7.5pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -1472,8 +1494,10 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>="Entity: " + Parameters!Entity.Value
-+ ", Trader: " + Parameters!Trader.Value</Value>
+                      <Value>
+												="Entity: " + Parameters!Entity.Value
+												+ ", Trader: " + Parameters!Trader.Value
+											</Value>
                       <Style>
                         <FontSize>7.5pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -1980,7 +2004,7 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>0.2in</Height>
+          <Height>0.23125in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -2004,6 +2028,7 @@ FormatDatetime(Parameters!SystemDate.Value,dateformat.ShortDate)</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
+              <Top>0.03125in</Top>
               <Left>8.576in</Left>
               <Height>0.2in</Height>
               <Width>2.36458in</Width>
