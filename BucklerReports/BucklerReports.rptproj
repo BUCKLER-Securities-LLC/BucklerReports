@@ -59,10 +59,10 @@
     <Report Include="CustomerPnL.rdl" />
     <Report Include="DailySettlementActivity.rdl" />
     <Report Include="DetailCashBalance.rdl" />
-    <Report Include="DetailedCashBalance.rdl" />
     <Report Include="FailsByAccount.rdl" />
     <Report Include="FailsByCorr.rdl" />
     <Report Include="FinancingPosition.rdl" />
+    <Report Include="FirmFail.rdl" />
     <Report Include="Openitems.rdl" />
     <Report Include="OutstandingRepoReport.rdl" />
     <Report Include="PendingOutright.rdl" />
