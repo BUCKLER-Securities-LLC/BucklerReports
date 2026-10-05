@@ -2,7 +2,7 @@
 <RptDataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="ReportDatabase">
   <ConnectionProperties>
     <Extension>SQL</Extension>
-    <ConnectString>Data Source=FISSQLUAT\FISSQLUAT;Initial Catalog=Rpt</ConnectString>
+    <ConnectString>Data Source=FISSQLdw;Initial Catalog=Rpt</ConnectString>
   </ConnectionProperties>
   <DataSourceID>2a406c7d-468c-4977-9d2b-709459922e3c</DataSourceID>
 </RptDataSource>
