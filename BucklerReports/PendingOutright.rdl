@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.14.36811.4</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-09-24T17:05:18.7437183Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-10-15T15:29:40.3842935Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -482,9 +482,8 @@
                                 <TextRun>
                                   <Value>TRANS NUM</Value>
                                   <Style>
-                                    <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
                                     <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                                    <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                                    <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                                   </Style>
@@ -524,9 +523,8 @@
                                 <TextRun>
                                   <Value>TRANS NUM</Value>
                                   <Style>
-                                    <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
                                     <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                                    <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                                    <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                                   </Style>
@@ -566,9 +564,8 @@
                                 <TextRun>
                                   <Value>SETTLE DATE</Value>
                                   <Style>
-                                    <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
                                     <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                                    <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                                    <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                                   </Style>
@@ -608,9 +605,8 @@
                                 <TextRun>
                                   <Value>B/S</Value>
                                   <Style>
-                                    <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
                                     <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                                    <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                                    <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                                   </Style>
@@ -650,9 +646,8 @@
                                 <TextRun>
                                   <Value>QUANTITY</Value>
                                   <Style>
-                                    <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
                                     <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                                    <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                                    <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                                   </Style>
@@ -692,9 +687,8 @@
                                 <TextRun>
                                   <Value>SECURITY</Value>
                                   <Style>
-                                    <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
                                     <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                                    <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                                    <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                                   </Style>
@@ -734,9 +728,8 @@
                                 <TextRun>
                                   <Value>CUSIP</Value>
                                   <Style>
-                                    <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
                                     <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                                    <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                                    <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                                   </Style>
@@ -776,9 +769,8 @@
                                 <TextRun>
                                   <Value>PRICE</Value>
                                   <Style>
-                                    <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
                                     <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                                    <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                                    <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                                   </Style>
@@ -818,9 +810,8 @@
                                 <TextRun>
                                   <Value>PRINCIPAL</Value>
                                   <Style>
-                                    <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
                                     <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                                    <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                                    <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                                   </Style>
@@ -860,9 +851,8 @@
                                 <TextRun>
                                   <Value>INTEREST</Value>
                                   <Style>
-                                    <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
                                     <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                                    <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                                    <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                                   </Style>
@@ -902,9 +892,8 @@
                                 <TextRun>
                                   <Value>NET MONEY</Value>
                                   <Style>
-                                    <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
                                     <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                                    <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                                    <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                                   </Style>
@@ -944,9 +933,8 @@
                                 <TextRun>
                                   <Value>COUNTERPARTY</Value>
                                   <Style>
-                                    <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
                                     <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                                    <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                                    <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                                   </Style>
@@ -986,9 +974,8 @@
                                 <TextRun>
                                   <Value>COMP STATUS</Value>
                                   <Style>
-                                    <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
                                     <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                                    <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                                    <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                                   </Style>
@@ -1028,9 +1015,8 @@
                                 <TextRun>
                                   <Value>LOCATION</Value>
                                   <Style>
-                                    <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
                                     <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                                    <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                                    <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                                   </Style>
@@ -1768,7 +1754,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+                                    <FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
                                     <FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
@@ -1806,7 +1792,7 @@
                                 <TextRun>
                                   <Value>PAR NET:</Value>
                                   <Style>
-                                    <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+                                    <FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
                                     <FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
@@ -1847,7 +1833,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!Quantity.Value)</Value>
                                   <Style>
-                                    <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+                                    <FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
                                     <FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -1886,7 +1872,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+                                    <FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
                                     <FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
@@ -1924,7 +1910,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+                                    <FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
                                     <FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
@@ -1962,7 +1948,7 @@
                                 <TextRun>
                                   <Value>NET MONEY:</Value>
                                   <Style>
-                                    <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+                                    <FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
                                     <FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
@@ -2003,7 +1989,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!NetMoney.Value)</Value>
                                   <Style>
-                                    <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+                                    <FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
                                     <FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -2042,7 +2028,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+                                    <FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
                                     <FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
@@ -2080,7 +2066,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+                                    <FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
                                     <FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
@@ -2118,7 +2104,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+                                    <FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
                                     <FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
                                     <FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
                                     <Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
@@ -2335,6 +2321,7 @@
                 <Value>=abs(Fields!Quantity.Value)</Value>
               </SortExpression>
             </SortExpressions>
+            <Top>0in</Top>
             <Height>1.76042in</Height>
             <Width>17.83239in</Width>
             <Style />
@@ -2467,9 +2454,9 @@
                     <TextRun>
                       <Value>TRANS NUM</Value>
                       <Style>
-                        <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
+                        <FontStyle>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontStyle>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                        <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                         <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                         <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
@@ -2505,9 +2492,9 @@
                     <TextRun>
                       <Value>TRADE DATE</Value>
                       <Style>
-                        <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
+                        <FontStyle>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontStyle>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                        <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                         <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                         <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
@@ -2544,9 +2531,9 @@
                     <TextRun>
                       <Value>SETTLE DATE</Value>
                       <Style>
-                        <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
+                        <FontStyle>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontStyle>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                        <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                         <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                         <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
@@ -2583,9 +2570,9 @@
                     <TextRun>
                       <Value>B/S</Value>
                       <Style>
-                        <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
+                        <FontStyle>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontStyle>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                        <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                         <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                         <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
@@ -2622,9 +2609,9 @@
                     <TextRun>
                       <Value>QUANTITY</Value>
                       <Style>
-                        <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
+                        <FontStyle>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontStyle>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                        <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                         <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                         <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
@@ -2661,9 +2648,9 @@
                     <TextRun>
                       <Value>SECURITY</Value>
                       <Style>
-                        <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
+                        <FontStyle>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontStyle>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                        <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                         <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                         <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
@@ -2700,9 +2687,9 @@
                     <TextRun>
                       <Value>CUSIP</Value>
                       <Style>
-                        <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
+                        <FontStyle>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontStyle>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                        <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                         <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                         <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
@@ -2739,9 +2726,9 @@
                     <TextRun>
                       <Value>PRICE</Value>
                       <Style>
-                        <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
+                        <FontStyle>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontStyle>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                        <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                         <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                         <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
@@ -2778,9 +2765,9 @@
                     <TextRun>
                       <Value>PRINCIPAL</Value>
                       <Style>
-                        <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
+                        <FontStyle>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontStyle>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                        <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                         <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                         <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
@@ -2817,9 +2804,9 @@
                     <TextRun>
                       <Value>INTEREST</Value>
                       <Style>
-                        <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
+                        <FontStyle>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontStyle>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                        <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                         <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                         <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
@@ -2856,9 +2843,9 @@
                     <TextRun>
                       <Value>NET MONEY</Value>
                       <Style>
-                        <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
+                        <FontStyle>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontStyle>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                        <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                         <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                         <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
@@ -2895,9 +2882,9 @@
                     <TextRun>
                       <Value>COUNTERPARTY</Value>
                       <Style>
-                        <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
+                        <FontStyle>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontStyle>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                        <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                         <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                         <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
@@ -2934,9 +2921,9 @@
                     <TextRun>
                       <Value>COMP STATUS</Value>
                       <Style>
-                        <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
+                        <FontStyle>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontStyle>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                        <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                         <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                         <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
@@ -2973,9 +2960,9 @@
                     <TextRun>
                       <Value>LOCATION</Value>
                       <Style>
-                        <FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
+                        <FontStyle>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontStyle>
                         <FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-                        <FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+                        <FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
                         <FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
                         <Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
                       </Style>
@@ -3102,7 +3089,7 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>0.22431in</Height>
+          <Height>0.2in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -3127,7 +3114,7 @@
                 </Paragraph>
               </Paragraphs>
               <Left>16.85322in</Left>
-              <Height>0.21389in</Height>
+              <Height>0.2in</Height>
               <Width>0.97917in</Width>
               <Style>
                 <Border>
