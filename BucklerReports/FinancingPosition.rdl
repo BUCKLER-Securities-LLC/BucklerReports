@@ -7,9 +7,9 @@
 		</am:CreatedBy>
 		<am:UpdatedBy>
 			<am:Name>SSDTRS</am:Name>
-			<am:Version>17.14.36717.8</am:Version>
+			<am:Version>17.14.36811.4</am:Version>
 		</am:UpdatedBy>
-		<am:LastModifiedTimestamp>2026-10-02T16:08:24.0998665Z</am:LastModifiedTimestamp>
+		<am:LastModifiedTimestamp>2026-09-14T11:09:31.7137597Z</am:LastModifiedTimestamp>
 	</am:AuthoringMetadata>
 	<df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
 	<AutoRefresh>0</AutoRefresh>
@@ -352,507 +352,6 @@
 								</TablixColumn>
 							</TablixColumns>
 							<TablixRows>
-								<TablixRow>
-									<Height>0.25in</Height>
-									<TablixCells>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox83">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value>ENTITY</Value>
-																	<Style>
-																		<FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
-																		<FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-																		<FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
-																		<FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
-																		<Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
-																	</Style>
-																</TextRun>
-															</TextRuns>
-															<Style>
-																<TextAlign>Center</TextAlign>
-															</Style>
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox56</rd:DefaultName>
-													<ZIndex>3</ZIndex>
-													<Visibility>
-														<Hidden>=Parameters!HideTableHeader.Value</Hidden>
-													</Visibility>
-													<Style>
-														<Border>
-															<Style>Solid</Style>
-														</Border>
-														<TopBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</TopBorder>
-														<BottomBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</BottomBorder>
-														<LeftBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</LeftBorder>
-														<RightBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</RightBorder>
-														<BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox93">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value>TRADER</Value>
-																	<Style>
-																		<FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
-																		<FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-																		<FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
-																		<FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
-																		<Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
-																	</Style>
-																</TextRun>
-															</TextRuns>
-															<Style>
-																<TextAlign>Center</TextAlign>
-															</Style>
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox57</rd:DefaultName>
-													<ZIndex>8</ZIndex>
-													<Visibility>
-														<Hidden>=Parameters!HideTableHeader.Value</Hidden>
-													</Visibility>
-													<Style>
-														<Border>
-															<Style>Solid</Style>
-														</Border>
-														<TopBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</TopBorder>
-														<BottomBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</BottomBorder>
-														<LeftBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</LeftBorder>
-														<RightBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</RightBorder>
-														<BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox86">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value>CUSIP</Value>
-																	<Style>
-																		<FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
-																		<FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-																		<FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
-																		<FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
-																		<Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
-																	</Style>
-																</TextRun>
-															</TextRuns>
-															<Style>
-																<TextAlign>Center</TextAlign>
-															</Style>
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox57</rd:DefaultName>
-													<ZIndex>4</ZIndex>
-													<Visibility>
-														<Hidden>=Parameters!HideTableHeader.Value</Hidden>
-													</Visibility>
-													<Style>
-														<Border>
-															<Style>Solid</Style>
-														</Border>
-														<TopBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</TopBorder>
-														<BottomBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</BottomBorder>
-														<LeftBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</LeftBorder>
-														<RightBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</RightBorder>
-														<BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox87">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value>ASSET DESCRIPTION</Value>
-																	<Style>
-																		<FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
-																		<FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-																		<FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
-																		<FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
-																		<Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
-																	</Style>
-																</TextRun>
-															</TextRuns>
-															<Style>
-																<TextAlign>Center</TextAlign>
-															</Style>
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox58</rd:DefaultName>
-													<ZIndex>5</ZIndex>
-													<Visibility>
-														<Hidden>=Parameters!HideTableHeader.Value</Hidden>
-													</Visibility>
-													<Style>
-														<Border>
-															<Style>Solid</Style>
-														</Border>
-														<TopBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</TopBorder>
-														<BottomBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</BottomBorder>
-														<LeftBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</LeftBorder>
-														<RightBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</RightBorder>
-														<BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox88">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value>SD POS</Value>
-																	<Style>
-																		<FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
-																		<FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-																		<FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
-																		<FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
-																		<Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
-																	</Style>
-																</TextRun>
-															</TextRuns>
-															<Style>
-																<TextAlign>Center</TextAlign>
-															</Style>
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox59</rd:DefaultName>
-													<ZIndex>6</ZIndex>
-													<Visibility>
-														<Hidden>=Parameters!HideTableHeader.Value</Hidden>
-													</Visibility>
-													<Style>
-														<Border>
-															<Style>Solid</Style>
-														</Border>
-														<TopBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</TopBorder>
-														<BottomBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</BottomBorder>
-														<LeftBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</LeftBorder>
-														<RightBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</RightBorder>
-														<BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox89">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value>FIN POS</Value>
-																	<Style>
-																		<FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
-																		<FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-																		<FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
-																		<FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
-																		<Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
-																	</Style>
-																</TextRun>
-															</TextRuns>
-															<Style>
-																<TextAlign>Center</TextAlign>
-															</Style>
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox60</rd:DefaultName>
-													<ZIndex>7</ZIndex>
-													<Visibility>
-														<Hidden>=Parameters!HideTableHeader.Value</Hidden>
-													</Visibility>
-													<Style>
-														<Border>
-															<Style>Solid</Style>
-														</Border>
-														<TopBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</TopBorder>
-														<BottomBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</BottomBorder>
-														<LeftBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</LeftBorder>
-														<RightBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</RightBorder>
-														<BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox90">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value>SEG POS</Value>
-																	<Style>
-																		<FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
-																		<FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-																		<FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
-																		<FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
-																		<Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
-																	</Style>
-																</TextRun>
-															</TextRuns>
-															<Style>
-																<TextAlign>Center</TextAlign>
-															</Style>
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox61</rd:DefaultName>
-													<ZIndex>9</ZIndex>
-													<Visibility>
-														<Hidden>=Parameters!HideTableHeader.Value</Hidden>
-													</Visibility>
-													<Style>
-														<Border>
-															<Style>Solid</Style>
-														</Border>
-														<TopBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</TopBorder>
-														<BottomBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</BottomBorder>
-														<LeftBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</LeftBorder>
-														<RightBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</RightBorder>
-														<BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox91">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value>NET POS</Value>
-																	<Style>
-																		<FontStyle>=First(Fields!RowFont.Value, "reportformat")</FontStyle>
-																		<FontFamily>=First(Fields!ReportHeaderFont.Value, "reportformat")</FontFamily>
-																		<FontSize>=First(Fields!ReportHeaderSize.Value, "reportformat")</FontSize>
-																		<FontWeight>=First(Fields!ReportHeaderWeight.Value, "reportformat")</FontWeight>
-																		<Color>=First(Fields!ReportHeaderForeCol.Value, "reportformat")</Color>
-																	</Style>
-																</TextRun>
-															</TextRuns>
-															<Style>
-																<TextAlign>Center</TextAlign>
-															</Style>
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox61</rd:DefaultName>
-													<ZIndex>10</ZIndex>
-													<Visibility>
-														<Hidden>=Parameters!HideTableHeader.Value</Hidden>
-													</Visibility>
-													<Style>
-														<Border>
-															<Style>Solid</Style>
-														</Border>
-														<TopBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</TopBorder>
-														<BottomBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</BottomBorder>
-														<LeftBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</LeftBorder>
-														<RightBorder>
-															<Color>Black</Color>
-															<Style>Solid</Style>
-															<Width>1pt</Width>
-														</RightBorder>
-														<BackgroundColor>=First(Fields!ReportHeaderBackCol.Value, "reportformat")</BackgroundColor>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-									</TablixCells>
-								</TablixRow>
 								<TablixRow>
 									<Height>0.25in</Height>
 									<TablixCells>
@@ -2040,9 +1539,6 @@
 											</SortExpressions>
 											<TablixMembers>
 												<TablixMember>
-													<KeepWithGroup>After</KeepWithGroup>
-												</TablixMember>
-												<TablixMember>
 													<Group Name="Details">
 														<GroupExpressions>
 															<GroupExpression>=Fields!CUSIP.Value</GroupExpression>
@@ -2071,15 +1567,16 @@
 							<BreakLocation>End</BreakLocation>
 						</PageBreak>
 						<Top>0.01042in</Top>
-						<Height>1.38543in</Height>
+						<Left>0.02778in</Left>
+						<Height>1.13543in</Height>
 						<Width>11.72136in</Width>
 						<Style />
 					</Tablix>
 				</ReportItems>
-				<Height>1.39585in</Height>
+				<Height>1.14585in</Height>
 				<Style />
 			</Body>
-			<Width>11.72136in</Width>
+			<Width>11.74914in</Width>
 			<Page>
 				<PageHeader>
 					<Height>1.06128in</Height>
@@ -2338,7 +1835,7 @@
 							<Top>0.81128in</Top>
 							<Left>3.12077in</Left>
 							<Height>0.25in</Height>
-							<Width>2.60057in</Width>
+							<Width>2.62835in</Width>
 							<ZIndex>5</ZIndex>
 							<Style>
 								<Border>
@@ -2395,9 +1892,9 @@
 							</Paragraphs>
 							<rd:DefaultName>Textbox59</rd:DefaultName>
 							<Top>0.81128in</Top>
-							<Left>5.72134in</Left>
+							<Left>5.74912in</Left>
 							<Height>0.25in</Height>
-							<Width>1.58334in</Width>
+							<Width>1.56945in</Width>
 							<ZIndex>6</ZIndex>
 							<Style>
 								<Border>
@@ -2454,7 +1951,7 @@
 							</Paragraphs>
 							<rd:DefaultName>Textbox60</rd:DefaultName>
 							<Top>0.81128in</Top>
-							<Left>7.30468in</Left>
+							<Left>7.31857in</Left>
 							<Height>0.25in</Height>
 							<Width>1.41667in</Width>
 							<ZIndex>7</ZIndex>
@@ -2572,9 +2069,9 @@
 							</Paragraphs>
 							<rd:DefaultName>Textbox61</rd:DefaultName>
 							<Top>0.81128in</Top>
-							<Left>8.72135in</Left>
+							<Left>8.73524in</Left>
 							<Height>0.25in</Height>
-							<Width>1.41666in</Width>
+							<Width>1.41667in</Width>
 							<ZIndex>9</ZIndex>
 							<Style>
 								<Border>
@@ -2631,7 +2128,7 @@
 							</Paragraphs>
 							<rd:DefaultName>Textbox61</rd:DefaultName>
 							<Top>0.81128in</Top>
-							<Left>10.13802in</Left>
+							<Left>10.1519in</Left>
 							<Height>0.25in</Height>
 							<Width>1.58334in</Width>
 							<ZIndex>10</ZIndex>
@@ -2742,7 +2239,7 @@
 									</Style>
 								</Paragraph>
 							</Paragraphs>
-							<Left>8.99579in</Left>
+							<Left>9.00967in</Left>
 							<Height>0.57083in</Height>
 							<Width>2.72557in</Width>
 							<ZIndex>11</ZIndex>
@@ -2789,8 +2286,7 @@
 									</Style>
 								</Paragraph>
 							</Paragraphs>
-							<Top>0in</Top>
-							<Left>10.74219in</Left>
+							<Left>10.75607in</Left>
 							<Height>0.21389in</Height>
 							<Width>0.97917in</Width>
 							<Style>
@@ -2873,15 +2369,6 @@
 			</DefaultValue>
 			<Prompt>Trader</Prompt>
 		</ReportParameter>
-		<ReportParameter Name="HideTableHeader">
-			<DataType>Boolean</DataType>
-			<DefaultValue>
-				<Values>
-					<Value>true</Value>
-				</Values>
-			</DefaultValue>
-			<Prompt>HideTableHeader</Prompt>
-		</ReportParameter>
 	</ReportParameters>
 	<ReportParametersLayout>
 		<GridLayoutDefinition>
@@ -2917,11 +2404,6 @@
 					<ColumnIndex>1</ColumnIndex>
 					<RowIndex>1</RowIndex>
 					<ParameterName>Trader</ParameterName>
-				</CellDefinition>
-				<CellDefinition>
-					<ColumnIndex>2</ColumnIndex>
-					<RowIndex>1</RowIndex>
-					<ParameterName>HideTableHeader</ParameterName>
 				</CellDefinition>
 			</CellDefinitions>
 		</GridLayoutDefinition>
