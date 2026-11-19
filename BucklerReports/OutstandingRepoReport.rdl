@@ -9,7 +9,7 @@
 			<am:Name>SSDTRS</am:Name>
 			<am:Version>17.14.36717.8</am:Version>
 		</am:UpdatedBy>
-		<am:LastModifiedTimestamp>2026-10-22T13:43:27.5018162Z</am:LastModifiedTimestamp>
+		<am:LastModifiedTimestamp>2026-11-18T19:34:02.4085191Z</am:LastModifiedTimestamp>
 	</am:AuthoringMetadata>
 	<df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
 	<AutoRefresh>0</AutoRefresh>
@@ -1856,7 +1856,7 @@
 														<Paragraph>
 															<TextRuns>
 																<TextRun>
-																	<Value>=Fields!NetMoney.Value+Fields!Daily.Value</Value>
+																	<Value>=Fields!NetMoney.Value</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
 																		<FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
