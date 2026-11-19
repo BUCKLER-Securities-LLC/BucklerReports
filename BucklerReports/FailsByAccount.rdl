@@ -9,7 +9,7 @@
 			<am:Name>SSDTRS</am:Name>
 			<am:Version>17.14.36811.4</am:Version>
 		</am:UpdatedBy>
-		<am:LastModifiedTimestamp>2026-09-11T11:00:38.0451774Z</am:LastModifiedTimestamp>
+		<am:LastModifiedTimestamp>2026-10-15T14:38:08.7829025Z</am:LastModifiedTimestamp>
 	</am:AuthoringMetadata>
 	<df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
 	<AutoRefresh>0</AutoRefresh>
@@ -576,6 +576,7 @@
 																	<Value>=iif(Fields!FTDFTR.Value="FTD","FAIL TO DELIVER (FTD)","FAIL TO RECEIVE (FTR)")</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -617,6 +618,7 @@
 																	<Value />
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -658,6 +660,7 @@
 																	<Value />
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -699,6 +702,7 @@
 																	<Value>=Count(Fields!TradeQuantity.Value)</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Format>#,0;(#,0)</Format>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
@@ -741,6 +745,7 @@
 																	<Value />
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -782,6 +787,7 @@
 																	<Value />
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -823,6 +829,7 @@
 																	<Value />
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -864,6 +871,7 @@
 																	<Value />
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -905,6 +913,7 @@
 																	<Value />
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -946,6 +955,7 @@
 																	<Value />
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -987,6 +997,7 @@
 																	<Value />
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -1028,6 +1039,7 @@
 																	<Value />
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -1074,6 +1086,8 @@
 																	<Value>=Fields!Trader.Value</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!RowWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
@@ -1114,6 +1128,8 @@
 																	<Value>=Fields!AccountNumber.Value</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!RowWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
@@ -1154,6 +1170,8 @@
 																	<Value>=Fields!AccountName.Value</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!RowWeight.Value, "reportformat")</FontWeight>
 																		<Format>M/d/yyyy</Format>
 																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -1195,6 +1213,8 @@
 																	<Value>=Fields!ExtRef.Value</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!RowWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
@@ -1235,6 +1255,8 @@
 																	<Value>=Fields!TradeDate.Value</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!RowWeight.Value, "reportformat")</FontWeight>
 																		<Format>M/d/yyyy</Format>
 																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -1276,6 +1298,8 @@
 																	<Value>=Fields!SettlementDate.Value</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!RowWeight.Value, "reportformat")</FontWeight>
 																		<Format>M/d/yyyy</Format>
 																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -1317,6 +1341,8 @@
 																	<Value>=Fields!CalDays.Value</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!RowWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
@@ -1357,6 +1383,8 @@
 																	<Value>=Fields!AssetDescription.Value</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!RowWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
@@ -1397,6 +1425,8 @@
 																	<Value>=Fields!CUSIPNumber.Value</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!RowWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
@@ -1437,6 +1467,8 @@
 																	<Value>=Fields!TradeQuantity.Value</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!RowWeight.Value, "reportformat")</FontWeight>
 																		<Format>n2</Format>
 																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -1478,6 +1510,8 @@
 																	<Value>=Fields!ExecutionPrice.Value</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!RowWeight.Value, "reportformat")</FontWeight>
 																		<Format>n4</Format>
 																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -1519,6 +1553,8 @@
 																	<Value>=Fields!NetAmount.Value</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!RowSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!RowWeight.Value, "reportformat")</FontWeight>
 																		<Format>n2</Format>
 																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -2587,17 +2623,19 @@
 									<TablixCells>
 										<TablixCell>
 											<CellContents>
-												<Textbox Name="Textbox2">
+												<Textbox Name="Textbox35">
 													<CanGrow>true</CanGrow>
 													<KeepTogether>true</KeepTogether>
 													<Paragraphs>
 														<Paragraph>
 															<TextRuns>
 																<TextRun>
-																	<Value>End of Report</Value>
+																	<Value />
 																	<Style>
-																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																		<FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
+																		<Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
 															</TextRuns>
@@ -2606,7 +2644,7 @@
 															</Style>
 														</Paragraph>
 													</Paragraphs>
-													<rd:DefaultName>Textbox1</rd:DefaultName>
+													<rd:DefaultName>Textbox35</rd:DefaultName>
 													<Style>
 														<Border>
 															<Color>LightGrey</Color>
@@ -2636,8 +2674,10 @@
 																<TextRun>
 																	<Value />
 																	<Style>
-																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																		<FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
+																		<Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
 															</TextRuns>
@@ -2676,8 +2716,10 @@
 																<TextRun>
 																	<Value />
 																	<Style>
-																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																		<FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
+																		<Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
 															</TextRuns>
@@ -2716,8 +2758,10 @@
 																<TextRun>
 																	<Value />
 																	<Style>
-																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																		<FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
+																		<Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
 															</TextRuns>
@@ -2756,8 +2800,10 @@
 																<TextRun>
 																	<Value />
 																	<Style>
-																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																		<FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
+																		<Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
 															</TextRuns>
@@ -2796,8 +2842,10 @@
 																<TextRun>
 																	<Value />
 																	<Style>
-																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																		<FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
+																		<Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
 															</TextRuns>
@@ -2836,8 +2884,10 @@
 																<TextRun>
 																	<Value />
 																	<Style>
-																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																		<FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
+																		<Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
 															</TextRuns>
@@ -2876,8 +2926,10 @@
 																<TextRun>
 																	<Value />
 																	<Style>
-																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																		<FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
+																		<Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
 															</TextRuns>
@@ -2916,8 +2968,10 @@
 																<TextRun>
 																	<Value />
 																	<Style>
-																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																		<FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
+																		<Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
 															</TextRuns>
@@ -2956,9 +3010,11 @@
 																<TextRun>
 																	<Value>=Sum(Fields!TradeQuantity.Value)</Value>
 																	<Style>
-																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
 																		<Format>n2</Format>
-																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																		<Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
 															</TextRuns>
@@ -2997,8 +3053,10 @@
 																<TextRun>
 																	<Value />
 																	<Style>
-																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
-																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																		<FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
+																		<Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
 															</TextRuns>
@@ -3037,9 +3095,11 @@
 																<TextRun>
 																	<Value>=Sum(Fields!NetAmount.Value)</Value>
 																	<Style>
-																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<FontFamily>=First(Fields!GroupFooterFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupFooterSize.Value, "reportformat")</FontSize>
+																		<FontWeight>=First(Fields!GroupFooterWeight.Value, "reportformat")</FontWeight>
 																		<Format>n2</Format>
-																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																		<Color>=First(Fields!GroupFooterForeCol.Value, "reportformat")</Color>
 																	</Style>
 																</TextRun>
 															</TextRuns>
@@ -3074,6 +3134,63 @@
 									<TablixCells>
 										<TablixCell>
 											<CellContents>
+												<Textbox Name="Textbox2">
+													<CanGrow>true</CanGrow>
+													<KeepTogether>true</KeepTogether>
+													<Paragraphs>
+														<Paragraph>
+															<TextRuns>
+																<TextRun>
+																	<Value>End of Report</Value>
+																	<Style>
+																		<FontFamily>=First(Fields!RowFont.Value, "reportformat")</FontFamily>
+																		<Color>=First(Fields!RowForeCol.Value, "reportformat")</Color>
+																	</Style>
+																</TextRun>
+															</TextRuns>
+															<Style>
+																<TextAlign>Left</TextAlign>
+															</Style>
+														</Paragraph>
+													</Paragraphs>
+													<rd:DefaultName>Textbox1</rd:DefaultName>
+													<Style>
+														<Border>
+															<Color>LightGrey</Color>
+															<Style>Solid</Style>
+														</Border>
+														<BackgroundColor>
+															=IIF(RowNumber(Nothing) Mod 2 = 0,
+															First(Fields!AltRowBackCol.Value, "reportformat"), First(Fields!RowBackCol.Value,
+															"reportformat"))
+														</BackgroundColor>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<PaddingBottom>2pt</PaddingBottom>
+													</Style>
+												</Textbox>
+												<ColSpan>12</ColSpan>
+											</CellContents>
+										</TablixCell>
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+									</TablixCells>
+								</TablixRow>
+								<TablixRow>
+									<Height>0.25in</Height>
+									<TablixCells>
+										<TablixCell>
+											<CellContents>
 												<Textbox Name="Textboxdisclaimer">
 													<CanGrow>true</CanGrow>
 													<KeepTogether>true</KeepTogether>
@@ -3099,327 +3216,20 @@
 														<PaddingBottom>2pt</PaddingBottom>
 													</Style>
 												</Textbox>
+												<ColSpan>12</ColSpan>
 											</CellContents>
 										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox7">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value />
-																	<Style />
-																</TextRun>
-															</TextRuns>
-															<Style />
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox7</rd:DefaultName>
-													<Style>
-														<Border>
-															<Style>None</Style>
-														</Border>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox50">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value />
-																	<Style />
-																</TextRun>
-															</TextRuns>
-															<Style />
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox15</rd:DefaultName>
-													<Style>
-														<Border>
-															<Style>None</Style>
-														</Border>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox18">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value />
-																	<Style />
-																</TextRun>
-															</TextRuns>
-															<Style />
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox15</rd:DefaultName>
-													<Style>
-														<Border>
-															<Style>None</Style>
-														</Border>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox27">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value />
-																	<Style />
-																</TextRun>
-															</TextRuns>
-															<Style />
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox15</rd:DefaultName>
-													<Style>
-														<Border>
-															<Style>None</Style>
-														</Border>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox30">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value />
-																	<Style />
-																</TextRun>
-															</TextRuns>
-															<Style />
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox15</rd:DefaultName>
-													<Style>
-														<Border>
-															<Style>None</Style>
-														</Border>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox41">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value />
-																	<Style />
-																</TextRun>
-															</TextRuns>
-															<Style />
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox15</rd:DefaultName>
-													<Style>
-														<Border>
-															<Style>None</Style>
-														</Border>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox53">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value />
-																	<Style />
-																</TextRun>
-															</TextRuns>
-															<Style />
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox15</rd:DefaultName>
-													<Style>
-														<Border>
-															<Style>None</Style>
-														</Border>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox305">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value />
-																	<Style />
-																</TextRun>
-															</TextRuns>
-															<Style />
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox305</rd:DefaultName>
-													<Style>
-														<Border>
-															<Style>None</Style>
-														</Border>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox315">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value />
-																	<Style />
-																</TextRun>
-															</TextRuns>
-															<Style />
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox315</rd:DefaultName>
-													<Style>
-														<Border>
-															<Style>None</Style>
-														</Border>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox310">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value />
-																	<Style />
-																</TextRun>
-															</TextRuns>
-															<Style />
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox310</rd:DefaultName>
-													<Style>
-														<Border>
-															<Style>None</Style>
-														</Border>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
-										<TablixCell>
-											<CellContents>
-												<Textbox Name="Textbox15">
-													<CanGrow>true</CanGrow>
-													<KeepTogether>true</KeepTogether>
-													<Paragraphs>
-														<Paragraph>
-															<TextRuns>
-																<TextRun>
-																	<Value />
-																	<Style />
-																</TextRun>
-															</TextRuns>
-															<Style />
-														</Paragraph>
-													</Paragraphs>
-													<rd:DefaultName>Textbox15</rd:DefaultName>
-													<Style>
-														<Border>
-															<Style>None</Style>
-														</Border>
-														<PaddingLeft>2pt</PaddingLeft>
-														<PaddingRight>2pt</PaddingRight>
-														<PaddingTop>2pt</PaddingTop>
-														<PaddingBottom>2pt</PaddingBottom>
-													</Style>
-												</Textbox>
-											</CellContents>
-										</TablixCell>
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
+										<TablixCell />
 									</TablixCells>
 								</TablixRow>
 							</TablixRows>
@@ -3476,6 +3286,9 @@
 								<TablixMember>
 									<KeepWithGroup>Before</KeepWithGroup>
 								</TablixMember>
+								<TablixMember>
+									<KeepWithGroup>Before</KeepWithGroup>
+								</TablixMember>
 							</TablixMembers>
 						</TablixRowHierarchy>
 						<RepeatColumnHeaders>true</RepeatColumnHeaders>
@@ -3483,7 +3296,7 @@
 						<DataSetName>MainreportDS</DataSetName>
 						<Top>0.875in</Top>
 						<Left>0.00201in</Left>
-						<Height>1.36458in</Height>
+						<Height>1.61458in</Height>
 						<Width>18.19051in</Width>
 						<Style />
 					</Tablix>
@@ -3519,6 +3332,7 @@
 																	<Value />
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -3575,6 +3389,7 @@
 																	<Value>Count</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -3590,6 +3405,7 @@
 																	<Value />
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -3646,6 +3462,7 @@
 																	<Value>Unsettled Qty</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -3702,6 +3519,7 @@
 																	<Value>Unsettled Net Amt</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -3763,6 +3581,7 @@
 																	<Value>=iif(Fields!FTDFTR.Value = "FTD", "FAIL TO DELIVER (FTD)", "FAIL TO RECEIVE (FTR)")</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
 																	</Style>
@@ -3819,6 +3638,7 @@
 																	<Value>=Count(Fields!TradeQuantity.Value)</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Format>#,0;(#,0)</Format>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
@@ -3876,6 +3696,7 @@
 																	<Value>=Sum(Fields!TradeQuantity.Value)</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Format>#,0;(#,0)</Format>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
@@ -3933,6 +3754,7 @@
 																	<Value>=sum(Fields!NetAmount.Value)</Value>
 																	<Style>
 																		<FontFamily>=First(Fields!GroupHeaderFont.Value, "reportformat")</FontFamily>
+																		<FontSize>=First(Fields!GroupHeaderSize.Value, "reportformat")</FontSize>
 																		<FontWeight>=First(Fields!GroupHeaderWeight.Value, "reportformat")</FontWeight>
 																		<Format>#,0;(#,0)</Format>
 																		<Color>=First(Fields!GroupHeaderForeCol.Value, "reportformat")</Color>
@@ -4048,7 +3870,7 @@
 						</Style>
 					</Tablix>
 				</ReportItems>
-				<Height>2.23958in</Height>
+				<Height>2.48958in</Height>
 				<Style />
 			</Body>
 			<Width>18.19252in</Width>
@@ -4741,7 +4563,7 @@
 					</Style>
 				</PageHeader>
 				<PageFooter>
-					<Height>0.22778in</Height>
+					<Height>0.2in</Height>
 					<PrintOnFirstPage>true</PrintOnFirstPage>
 					<PrintOnLastPage>true</PrintOnLastPage>
 					<ReportItems>
@@ -4765,8 +4587,9 @@
 									</Style>
 								</Paragraph>
 							</Paragraphs>
+							<Top>0in</Top>
 							<Left>17.21335in</Left>
-							<Height>0.21389in</Height>
+							<Height>0.2in</Height>
 							<Width>0.97917in</Width>
 							<Style>
 								<Border>

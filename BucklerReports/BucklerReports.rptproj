@@ -63,10 +63,13 @@
     <Report Include="FailsByCorr.rdl" />
     <Report Include="FinancingPosition.rdl" />
     <Report Include="FirmFail.rdl" />
+    <Report Include="MonthlyBilling.rdl" />
+    <Report Include="NAV.rdl" />
     <Report Include="Openitems.rdl" />
     <Report Include="OutstandingRepoReport.rdl" />
     <Report Include="PendingOutright.rdl" />
     <Report Include="PNLCalc.rdl" />
+    <Report Include="PNLCalcDetail.rdl" />
     <Report Include="SDPnL.rdl" />
     <Report Include="SDPositionDetail.rdl" />
     <Report Include="SegPosition.rdl" />
